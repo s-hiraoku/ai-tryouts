@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>宣言型部分更新の試作用</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f3efe6;
+      color: #1d1a16;
+      font-family: "WenQuanYi Micro Hei", "Droid Sans Fallback", sans-serif;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 1.3;
+      margin: 0 0 8px;
+    }
+    h2 {
+      font-size: 22px;
+      margin: 36px 0 8px;
+    }
+    .lead, .status {
+      max-width: 62ch;
+    }
+    .slot {
+      background: white;
+      border: 1px solid #d9d2c5;
+      padding: 12px 16px;
+      min-height: 3em;
+    }
+    .placeholder {
+      color: #6d645b;
+      margin: 0;
+    }
+    .note {
+      background: #fff8e8;
+      border: 1px solid #e2c98a;
+      padding: 12px 16px;
+    }
+    button {
+      margin-top: 12px;
+      font: inherit;
+      padding: 8px 14px;
+      background: #1d1a16;
+      color: #f3efe6;
+      border: 0;
+    }
+    code {
+      font-family: ui-monospace, monospace;
+      font-size: 0.92em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>宣言型部分更新</h1>
+    <p class="lead">文書の途中に印を置き、後から来た template でその範囲だけを差し替えるサンプルです。スクリプトは、動いたかどうかの表示と、フラグの向こうにある追記だけに使います。</p>
+
+    <h2>文書内のパッチ</h2>
+    <p id="patch-status" class="status">確認しています。</p>
+    <div id="notice-slot" class="slot">
+      <?start name="notice">
+      <p id="notice-placeholder" class="placeholder">この文が残っているときは、template for は動いていません。</p>
+      <?end>
+    </div>
+    <template for="notice">
+      <p id="notice-patched">この段落は、後から来た template が枠の中へ差し込んだものです。</p>
+    </template>
+    <div id="patch-unsupported" class="note" hidden>
+      <p>未対応です。このページの印は処理命令のままコメントになり、上のプレースホルダが残ります。Chrome のドキュメントは、このパッチを Chrome 150 以降としている。フラグ名は Chrome Platform Status にありません。</p>
+    </div>
+
+    <h2>streamAppendHTMLUnsafe で追記する</h2>
+    <p id="stream-status" class="status">確認しています。</p>
+    <div id="stream-slot" class="slot">
+      <?marker name="stream-item">
+    </div>
+    <button type="button" id="stream-add" hidden>1件追加する</button>
+    <div id="stream-unsupported" class="note" hidden>
+      <p>未対応です。Element に streamAppendHTMLUnsafe がありません。Chrome のドキュメントは、Chrome 148 以降で chrome://flags/#enable-experimental-web-platform-features を Enabled にすると試せると書いています。アドレスバーにその URL を貼り付けて再起動してください。</p>
+    </div>
+  </main>
+  <script>
+    const slot = document.querySelector("#notice-slot");
+    const patched = slot.querySelector("#notice-patched");
+    const placeholder = document.querySelector("#notice-placeholder");
+    const patchStatus = document.querySelector("#patch-status");
+    if (patched && !placeholder) {
+      patchStatus.textContent = "差し替えが動いています。プレースホルダは残っていません。";
+    } else {
+      patchStatus.textContent = "未対応";
+      document.querySelector("#patch-unsupported").hidden = false;
+    }
+
+    const streamSlot = document.querySelector("#stream-slot");
+    const streamStatus = document.querySelector("#stream-status");
+    const addButton = document.querySelector("#stream-add");
+    if (typeof streamSlot.streamAppendHTMLUnsafe !== "function") {
+      streamStatus.textContent = "未対応";
+      document.querySelector("#stream-unsupported").hidden = false;
+    } else {
+      streamStatus.textContent = "streamAppendHTMLUnsafe があります。ボタンで 1 件ずつ追記します。";
+      addButton.hidden = false;
+      let count = 0;
+      addButton.addEventListener("click", async () => {
+        count += 1;
+        const writer = streamSlot.streamAppendHTMLUnsafe().getWriter();
+        try {
+          await writer.write(
+            '<template for="stream-item"><p>追加 ' + count + '</p><?marker name="stream-item"></template>'
+          );
+          await writer.close();
+          streamStatus.textContent = count + " 件を追記しました。";
+        } catch (error) {
+          streamStatus.textContent = "追記に失敗しました。" + error.message;
+        }
+      });
+    }
+  </script>
+</body>
+</html>
