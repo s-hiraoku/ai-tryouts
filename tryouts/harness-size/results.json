@@ -1,0 +1,283 @@
+{
+  "started_utc": "2026-10-13T14:08:43Z",
+  "runner": "Cursor Task generalPurpose, model inherit",
+  "parent_model": "Grok 4.7",
+  "cli": {
+    "installed": "2026.10.01-e373342",
+    "auth": "not logged in",
+    "ran": false
+  },
+  "instructions": {
+    "minimal_chars": 510,
+    "full_chars": 17961,
+    "full_lines": 783
+  },
+  "runs": [
+    {
+      "dir": "quill-north",
+      "arm": "minimal",
+      "rep": 1,
+      "agent_id": "bc-2647498e-0185-56ed-bca3-bc2ac9cccbb9",
+      "messages": 54,
+      "span_seconds": 172.1,
+      "opened_agents_file": true,
+      "agents_read": {
+        "stored_result_chars": 770,
+        "stored_result_has_rule": true,
+        "duration_ms": 61
+      },
+      "ran_quill_check": true,
+      "tool_args_left_directory": false,
+      "notes_quote_line_391": false,
+      "transcript_bytes": 45272
+    },
+    {
+      "dir": "quill-east",
+      "arm": "full",
+      "rep": 1,
+      "agent_id": "bc-01903e55-b64c-5fb2-9f11-462adce00379",
+      "messages": 54,
+      "span_seconds": 207.0,
+      "opened_agents_file": true,
+      "agents_read": {
+        "stored_result_chars": 0,
+        "stored_result_has_rule": false,
+        "duration_ms": 1591
+      },
+      "ran_quill_check": true,
+      "tool_args_left_directory": false,
+      "notes_quote_line_391": true,
+      "transcript_bytes": 58114
+    },
+    {
+      "dir": "quill-west",
+      "arm": "none",
+      "rep": 1,
+      "agent_id": "bc-468d6ef7-fec1-599e-ab95-376eb1fbfbd9",
+      "messages": 33,
+      "span_seconds": 145.8,
+      "opened_agents_file": false,
+      "agents_read": null,
+      "ran_quill_check": true,
+      "tool_args_left_directory": false,
+      "notes_quote_line_391": false,
+      "transcript_bytes": 27512
+    },
+    {
+      "dir": "quill-south",
+      "arm": "minimal",
+      "rep": 2,
+      "agent_id": "bc-b5931c90-e99b-51e8-9f29-221fb1009f8a",
+      "messages": 29,
+      "span_seconds": 54.4,
+      "opened_agents_file": true,
+      "agents_read": {
+        "stored_result_chars": 770,
+        "stored_result_has_rule": true,
+        "duration_ms": 175
+      },
+      "ran_quill_check": true,
+      "tool_args_left_directory": false,
+      "notes_quote_line_391": false,
+      "transcript_bytes": 23163
+    },
+    {
+      "dir": "quill-up",
+      "arm": "full",
+      "rep": 2,
+      "agent_id": "bc-c2f5e438-02a4-5996-aba5-1a66642a2017",
+      "messages": 32,
+      "span_seconds": 590.0,
+      "opened_agents_file": true,
+      "agents_read": {
+        "stored_result_chars": 0,
+        "stored_result_has_rule": false,
+        "duration_ms": 155
+      },
+      "ran_quill_check": true,
+      "tool_args_left_directory": false,
+      "notes_quote_line_391": true,
+      "transcript_bytes": 30617
+    },
+    {
+      "dir": "quill-down",
+      "arm": "none",
+      "rep": 2,
+      "agent_id": "bc-d076fd57-18a2-5952-bd58-e9fa66a9efa3",
+      "messages": 37,
+      "span_seconds": 131.1,
+      "opened_agents_file": false,
+      "agents_read": null,
+      "ran_quill_check": true,
+      "tool_args_left_directory": false,
+      "notes_quote_line_391": false,
+      "transcript_bytes": 25145
+    }
+  ],
+  "grades": {
+    "task": {
+      "root": "/workspace/tryouts/harness-size/task",
+      "behavior_passed": 1,
+      "behavior_total": 9,
+      "behavior_rate": 0.1111111111111111,
+      "rules_passed": 1,
+      "rules_total": 8,
+      "rules": {
+        "notices_file": false,
+        "export_from_index": false,
+        "reexport_source": false,
+        "no_date": false,
+        "no_random": false,
+        "no_console": false,
+        "no_currency": false,
+        "banner_file_untouched": true
+      },
+      "failures": [
+        "missing src/notices.js",
+        "src/index.js does not mention qv_format_notice",
+        "index does not export qv_format_notice"
+      ]
+    },
+    "fixture": {
+      "root": "/workspace/tryouts/harness-size/fixture",
+      "behavior_passed": 9,
+      "behavior_total": 9,
+      "behavior_rate": 1,
+      "rules_passed": 8,
+      "rules_total": 8,
+      "rules": {
+        "notices_file": true,
+        "export_from_index": true,
+        "reexport_source": true,
+        "no_date": true,
+        "no_random": true,
+        "no_console": true,
+        "no_currency": true,
+        "banner_file_untouched": true
+      },
+      "failures": []
+    },
+    "quill-north": {
+      "root": "/workspace/tryouts/harness-size/runs/quill-north",
+      "behavior_passed": 9,
+      "behavior_total": 9,
+      "behavior_rate": 1,
+      "rules_passed": 8,
+      "rules_total": 8,
+      "rules": {
+        "notices_file": true,
+        "export_from_index": true,
+        "reexport_source": true,
+        "no_date": true,
+        "no_random": true,
+        "no_console": true,
+        "no_currency": true,
+        "banner_file_untouched": true
+      },
+      "failures": []
+    },
+    "quill-east": {
+      "root": "/workspace/tryouts/harness-size/runs/quill-east",
+      "behavior_passed": 9,
+      "behavior_total": 9,
+      "behavior_rate": 1,
+      "rules_passed": 8,
+      "rules_total": 8,
+      "rules": {
+        "notices_file": true,
+        "export_from_index": true,
+        "reexport_source": true,
+        "no_date": true,
+        "no_random": true,
+        "no_console": true,
+        "no_currency": true,
+        "banner_file_untouched": true
+      },
+      "failures": []
+    },
+    "quill-west": {
+      "root": "/workspace/tryouts/harness-size/runs/quill-west",
+      "behavior_passed": 1,
+      "behavior_total": 9,
+      "behavior_rate": 0.1111111111111111,
+      "rules_passed": 1,
+      "rules_total": 8,
+      "rules": {
+        "notices_file": false,
+        "export_from_index": false,
+        "reexport_source": false,
+        "no_date": false,
+        "no_random": false,
+        "no_console": false,
+        "no_currency": false,
+        "banner_file_untouched": true
+      },
+      "failures": [
+        "missing src/notices.js",
+        "src/index.js does not mention qv_format_notice",
+        "index does not export qv_format_notice"
+      ]
+    },
+    "quill-south": {
+      "root": "/workspace/tryouts/harness-size/runs/quill-south",
+      "behavior_passed": 9,
+      "behavior_total": 9,
+      "behavior_rate": 1,
+      "rules_passed": 8,
+      "rules_total": 8,
+      "rules": {
+        "notices_file": true,
+        "export_from_index": true,
+        "reexport_source": true,
+        "no_date": true,
+        "no_random": true,
+        "no_console": true,
+        "no_currency": true,
+        "banner_file_untouched": true
+      },
+      "failures": []
+    },
+    "quill-up": {
+      "root": "/workspace/tryouts/harness-size/runs/quill-up",
+      "behavior_passed": 9,
+      "behavior_total": 9,
+      "behavior_rate": 1,
+      "rules_passed": 8,
+      "rules_total": 8,
+      "rules": {
+        "notices_file": true,
+        "export_from_index": true,
+        "reexport_source": true,
+        "no_date": true,
+        "no_random": true,
+        "no_console": true,
+        "no_currency": true,
+        "banner_file_untouched": true
+      },
+      "failures": []
+    },
+    "quill-down": {
+      "root": "/workspace/tryouts/harness-size/runs/quill-down",
+      "behavior_passed": 1,
+      "behavior_total": 9,
+      "behavior_rate": 0.1111111111111111,
+      "rules_passed": 1,
+      "rules_total": 8,
+      "rules": {
+        "notices_file": false,
+        "export_from_index": false,
+        "reexport_source": false,
+        "no_date": false,
+        "no_random": false,
+        "no_console": false,
+        "no_currency": false,
+        "banner_file_untouched": true
+      },
+      "failures": [
+        "missing src/notices.js",
+        "src/index.js does not mention qv_format_notice",
+        "index does not export qv_format_notice"
+      ]
+    }
+  }
+}
