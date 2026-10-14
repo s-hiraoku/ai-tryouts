@@ -1,0 +1,8 @@
+{
+  "name": "quill-notices",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "quill:check": "node scripts/banner-check.js"
+  }
+}
