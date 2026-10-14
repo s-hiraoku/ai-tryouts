@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML-in-Canvas の試作用</title>
+  <!-- トークンは content に入れる。コミットしない。
+  <meta http-equiv="origin-trial" content="">
+  -->
+  <style>
+    body {
+      margin: 0;
+      background: #f3efe6;
+      color: #1d1a16;
+      font-family: "WenQuanYi Micro Hei", "Droid Sans Fallback", sans-serif;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 1.3;
+      margin: 0 0 8px;
+    }
+    h2 {
+      font-size: 22px;
+      margin: 36px 0 8px;
+    }
+    a {
+      color: #0b4f6c;
+    }
+    .lead {
+      max-width: 62ch;
+      margin: 0;
+    }
+    .status {
+      min-height: 1.6em;
+      margin: 8px 0;
+    }
+    .note {
+      background: #fff8e8;
+      border: 1px solid #e2c98a;
+      padding: 12px 16px;
+      max-width: 68ch;
+    }
+    .note code, p code {
+      font-family: ui-monospace, monospace;
+      font-size: 0.92em;
+    }
+    canvas {
+      display: block;
+      background: white;
+    }
+    button {
+      margin-top: 12px;
+      font: inherit;
+      padding: 8px 14px;
+      background: #1d1a16;
+      color: #f3efe6;
+      border: 0;
+    }
+    button:disabled {
+      background: #8a8175;
+    }
+    .preview {
+      display: block;
+      margin-top: 12px;
+      max-width: 100%;
+      background: white;
+    }
+    #card-a {
+      width: 560px;
+      box-sizing: border-box;
+      padding: 28px 32px 32px;
+      background: #fffdf8;
+      color: #1d1a16;
+    }
+    #card-a h3, #card-a p {
+      text-wrap: balance;
+      text-box: trim-both text;
+      word-break: auto-phrase;
+    }
+    #card-a h3 {
+      margin: 0 0 16px;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+    #card-a p {
+      margin: 0;
+      font-size: 18px;
+    }
+    #card-b {
+      width: 480px;
+      height: 300px;
+      box-sizing: border-box;
+      padding: 20px;
+      background: #102027;
+      color: white;
+    }
+    #card-b .swatch {
+      height: 88px;
+      background: linear-gradient(#e24b3b, #2f6fed);
+    }
+    #card-b h3 {
+      margin: 14px 0 4px;
+      font-size: 28px;
+    }
+    #card-b p {
+      margin: 0 0 12px;
+    }
+    #card-b button {
+      background: white;
+      color: #102027;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>HTML-in-Canvas</h1>
+    <p class="lead">HTML と CSS で組んだ要素を Canvas に描くサンプルです。対応していないブラウザでは描画せず、有効にする手順を出します。</p>
+
+    <h2>デモ A. 日本語の組版を PNG にする</h2>
+    <p id="status-a" class="status">確認しています。</p>
+    <div id="unsupported-a" class="note" hidden>
+      <p id="unsupported-a-text"></p>
+    </div>
+    <div id="panel-a" hidden>
+      <canvas id="canvas-a" width="560" height="220" layoutsubtree>
+        <article id="card-a" drawable>
+          <h3>文節の途中では折り返さない</h3>
+          <p>この段落は text-wrap の balance、text-box の trim-both text、word-break の auto-phrase で組んでいます。Canvas の fillText では行の長さを揃えたり、文節で区切ったりできません。</p>
+        </article>
+      </canvas>
+      <p id="css-a" class="status"></p>
+      <button type="button" id="copy-a" disabled>PNG をクリップボードに書き込む</button>
+      <p id="copy-status-a" class="status"></p>
+      <img id="preview-a" class="preview" alt="" hidden>
+    </div>
+
+    <h2>デモ B. シェーダーで HTML をゆがめる</h2>
+    <p id="status-b" class="status">確認しています。</p>
+    <div id="unsupported-b" class="note" hidden>
+      <p id="unsupported-b-text"></p>
+    </div>
+    <div id="panel-b" hidden>
+      <canvas id="canvas-b" width="480" height="300" layoutsubtree>
+        <div id="card-b" drawable>
+          <div class="swatch"></div>
+          <h3>渦</h3>
+          <p id="warp-label">この塊を、そのままテクスチャにしています。</p>
+          <button type="button" id="inside-b">押す</button>
+        </div>
+      </canvas>
+      <p>渦は見た目だけです。クリックの位置は、ゆがむ前の矩形のままです。</p>
+      <p id="hit-b" class="status"></p>
+    </div>
+  </main>
+  <script>
+    const enableSteps = [
+      "アドレスバーに chrome://flags/#canvas-draw-element を貼り付け、Enabled にして再起動する。",
+      "WICG の説明では chrome://flags/#enable-experimental-web-platform-features も Enabled にする。",
+      "Origin Trial の名前は html-in-canvas。トークンは head の meta に入れ、コミットしない。"
+    ].join("");
+
+    function canvasApis() {
+      const canvas = HTMLCanvasElement.prototype;
+      const gl = window.WebGL2RenderingContext && WebGL2RenderingContext.prototype;
+      return {
+        paint: "onpaint" in canvas && typeof canvas.requestPaint === "function",
+        drawElementImage: typeof CanvasRenderingContext2D.prototype.drawElementImage === "function",
+        texElementSubImage2D: !!(gl && typeof gl.texElementSubImage2D === "function"),
+        updateElementGeometry: typeof canvas.updateElementGeometry === "function"
+      };
+    }
+
+    function prepareCanvas(canvas) {
+      if ("content" in HTMLCanvasElement.prototype) {
+        canvas.setAttribute("content", "drawable");
+        canvas.removeAttribute("layoutsubtree");
+      } else {
+        canvas.setAttribute("layoutsubtree", "");
+      }
+    }
+
+    function showUnsupported(status, box, text, message) {
+      status.textContent = "未対応";
+      box.hidden = false;
+      text.textContent = message;
+    }
+
+    function cssLine() {
+      const checks = [
+        ["text-wrap", "balance"],
+        ["text-box", "trim-both text"],
+        ["word-break", "auto-phrase"]
+      ];
+      return checks.map(([prop, value]) => {
+        const ok = CSS.supports(prop, value);
+        return prop + ": " + value + (ok ? " は有効" : " はこのブラウザにない");
+      }).join("。") + "。";
+    }
+
+    const apis = canvasApis();
+
+    const statusA = document.querySelector("#status-a");
+    const panelA = document.querySelector("#panel-a");
+    const canvasA = document.querySelector("#canvas-a");
+    const cardA = document.querySelector("#card-a");
+    const copyButton = document.querySelector("#copy-a");
+
+    if (!apis.paint || !apis.drawElementImage) {
+      showUnsupported(
+        statusA,
+        document.querySelector("#unsupported-a"),
+        document.querySelector("#unsupported-a-text"),
+        "drawElementImage か paint がありません。" + enableSteps
+      );
+    } else {
+      prepareCanvas(canvasA);
+      document.querySelector("#css-a").textContent = cssLine();
+      const ctx = canvasA.getContext("2d");
+      let settled = false;
+      canvasA.addEventListener("paint", () => {
+        const width = Math.ceil(cardA.offsetWidth);
+        const height = Math.ceil(cardA.offsetHeight);
+        if (width === 0 || height === 0) {
+          return;
+        }
+        if (canvasA.width !== width || canvasA.height !== height) {
+          canvasA.width = width;
+          canvasA.height = height;
+        }
+        try {
+          ctx.reset();
+          ctx.drawElementImage(cardA, 0, 0);
+        } catch (error) {
+          settled = true;
+          showUnsupported(
+            statusA,
+            document.querySelector("#unsupported-a"),
+            document.querySelector("#unsupported-a-text"),
+            "drawElementImage が失敗しました。" + error.message + enableSteps
+          );
+          panelA.hidden = true;
+          return;
+        }
+        settled = true;
+        copyButton.disabled = false;
+        statusA.textContent = "描画しました。";
+      });
+      panelA.hidden = false;
+      requestAnimationFrame(() => canvasA.requestPaint());
+      setTimeout(() => {
+        if (!settled) {
+          showUnsupported(
+            statusA,
+            document.querySelector("#unsupported-a"),
+            document.querySelector("#unsupported-a-text"),
+            "paint が来ませんでした。" + enableSteps
+          );
+          panelA.hidden = true;
+        }
+      }, 1500);
+
+      copyButton.addEventListener("click", () => {
+        const copyStatus = document.querySelector("#copy-status-a");
+        canvasA.toBlob(async (blob) => {
+          if (!blob) {
+            copyStatus.textContent = "PNG を作れませんでした。";
+            return;
+          }
+          const preview = document.querySelector("#preview-a");
+          preview.hidden = false;
+          preview.alt = "toBlob で作った PNG";
+          preview.src = URL.createObjectURL(blob);
+          if (!navigator.clipboard || typeof navigator.clipboard.write !== "function") {
+            copyStatus.textContent = "clipboard.write がありません。上に PNG のプレビューを出しています。";
+            return;
+          }
+          try {
+            await navigator.clipboard.write([
+              new ClipboardItem({ "image/png": blob })
+            ]);
+            copyStatus.textContent = "clipboard.write で PNG を書き込みました。";
+          } catch (error) {
+            copyStatus.textContent = "clipboard.write が失敗しました。" + error.message;
+          }
+        }, "image/png");
+      });
+    }
+
+    const statusB = document.querySelector("#status-b");
+    const panelB = document.querySelector("#panel-b");
+    const canvasB = document.querySelector("#canvas-b");
+    const cardB = document.querySelector("#card-b");
+
+    if (!apis.paint || !apis.texElementSubImage2D) {
+      showUnsupported(
+        statusB,
+        document.querySelector("#unsupported-b"),
+        document.querySelector("#unsupported-b-text"),
+        "texElementSubImage2D か paint がありません。" + enableSteps
+      );
+    } else {
+      const gl = canvasB.getContext("webgl2", { preserveDrawingBuffer: true });
+      if (!gl) {
+        showUnsupported(
+          statusB,
+          document.querySelector("#unsupported-b"),
+          document.querySelector("#unsupported-b-text"),
+          "WebGL2 のコンテキストを作れませんでした。"
+        );
+      } else {
+        prepareCanvas(canvasB);
+        const program = createProgram(gl);
+        if (!program) {
+          showUnsupported(
+            statusB,
+            document.querySelector("#unsupported-b"),
+            document.querySelector("#unsupported-b-text"),
+            "シェーダーをコンパイルできませんでした。"
+          );
+        } else {
+        panelB.hidden = false;
+        const texture = gl.createTexture();
+        let texWidth = 0;
+        let texHeight = 0;
+        let started = 0;
+        const buffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+        gl.bufferData(
+          gl.ARRAY_BUFFER,
+          new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]),
+          gl.STATIC_DRAW
+        );
+
+        document.querySelector("#inside-b").addEventListener("click", () => {
+          document.querySelector("#warp-label").textContent = "ボタンのクリックは DOM に届きました。";
+          document.querySelector("#hit-b").textContent = "ボタンのクリックは DOM に届きました。ゆがみの位置とは一致しません。";
+        });
+
+        canvasB.addEventListener("paint", () => {
+          const width = Math.ceil(cardB.offsetWidth);
+          const height = Math.ceil(cardB.offsetHeight);
+          if (width === 0 || height === 0 || !program) {
+            return;
+          }
+          try {
+            gl.bindTexture(gl.TEXTURE_2D, texture);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+            if (texWidth !== width || texHeight !== height) {
+              gl.texImage2D(
+                gl.TEXTURE_2D,
+                0,
+                gl.RGBA8,
+                width,
+                height,
+                0,
+                gl.RGBA,
+                gl.UNSIGNED_BYTE,
+                null
+              );
+              texWidth = width;
+              texHeight = height;
+            }
+            gl.texElementSubImage2D(gl.TEXTURE_2D, 0, 0, 0, cardB);
+            const seconds = started ? (performance.now() - started) / 1000 : 0;
+            drawSwirl(gl, program, buffer, seconds);
+          } catch (error) {
+            showUnsupported(
+              statusB,
+              document.querySelector("#unsupported-b"),
+              document.querySelector("#unsupported-b-text"),
+              "WebGL への描画が失敗しました。" + error.message
+            );
+            panelB.hidden = true;
+            return;
+          }
+          if (gl.getError() !== gl.NO_ERROR) {
+            showUnsupported(
+              statusB,
+              document.querySelector("#unsupported-b"),
+              document.querySelector("#unsupported-b-text"),
+              "WebGL がエラーを返しました。"
+            );
+            panelB.hidden = true;
+            return;
+          }
+          statusB.textContent = "描画しました。";
+          if (apis.updateElementGeometry) {
+            try {
+              canvasB.updateElementGeometry(cardB, {
+                canvasTransform: new DOMMatrix()
+              });
+            } catch (error) {
+              document.querySelector("#hit-b").textContent =
+                "updateElementGeometry が失敗しました。" + error.message;
+            }
+          }
+        });
+
+        function frame(now) {
+          if (panelB.hidden) {
+            return;
+          }
+          if (!started) {
+            started = now;
+          }
+          canvasB.requestPaint();
+          requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+        }
+      }
+    }
+
+    function createProgram(gl) {
+      const vertex = compile(gl, gl.VERTEX_SHADER, `#version 300 es
+        in vec2 pos;
+        out vec2 uv;
+        void main() {
+          uv = pos * 0.5 + 0.5;
+          gl_Position = vec4(pos, 0.0, 1.0);
+        }
+      `);
+      // Chrome 154 では要素の上端がテクスチャの v=0 に入る。表示の上端へ合わせる。
+      const fragment = compile(gl, gl.FRAGMENT_SHADER, `#version 300 es
+        precision highp float;
+        uniform sampler2D tex;
+        uniform float time;
+        in vec2 uv;
+        out vec4 color;
+        void main() {
+          vec2 html = vec2(uv.x, 1.0 - uv.y);
+          vec2 p = html - 0.5;
+          float radius = length(p);
+          float angle = atan(p.y, p.x);
+          float twist = smoothstep(0.62, 0.0, radius) * (1.1 + sin(time));
+          angle += twist;
+          vec2 sampleAt = vec2(cos(angle), sin(angle)) * radius + 0.5;
+          color = texture(tex, sampleAt);
+        }
+      `);
+      if (!vertex || !fragment) {
+        return null;
+      }
+      const program = gl.createProgram();
+      gl.attachShader(program, vertex);
+      gl.attachShader(program, fragment);
+      gl.linkProgram(program);
+      if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+        return null;
+      }
+      return program;
+    }
+
+    function compile(gl, type, source) {
+      const shader = gl.createShader(type);
+      gl.shaderSource(shader, source);
+      gl.compileShader(shader);
+      if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+        return null;
+      }
+      return shader;
+    }
+
+    function drawSwirl(gl, program, buffer, seconds) {
+      gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+      gl.useProgram(program);
+      gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+      const loc = gl.getAttribLocation(program, "pos");
+      gl.enableVertexAttribArray(loc);
+      gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+      gl.uniform1i(gl.getUniformLocation(program, "tex"), 0);
+      gl.uniform1f(gl.getUniformLocation(program, "time"), seconds);
+      gl.drawArrays(gl.TRIANGLES, 0, 6);
+    }
+  </script>
+</body>
+</html>
