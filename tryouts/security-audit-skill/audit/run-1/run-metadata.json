@@ -1,0 +1,65 @@
+{
+  "run_id": "run-1",
+  "repo": "fixture-library",
+  "target": "/workspace/tryouts/security-audit-skill/sample",
+  "source_ref": {
+    "commit": "c8dcfc74bd1f52ae812c741f4e14b5d03d1194ae",
+    "worktree_dirty": false,
+    "note": "The commit is the ai-tryouts commit that added sample/. The sample directory is not its own Git repository."
+  },
+  "profile": "quick",
+  "scope_paths": [
+    "README.md",
+    "package.json",
+    "src/library.js",
+    "data/user-files/hello.txt",
+    "data/public/readme.txt",
+    "data/public/notes.txt",
+    "data/private/payroll.txt"
+  ],
+  "budget": null,
+  "execution_policy": "sandboxed-source-and-local-only",
+  "selected_companion_files": [],
+  "prior_run_paths": [],
+  "shared_file_owners": {
+    "run-metadata.json": "parent",
+    "architecture.md": "parent",
+    "coverage-ledger.json": "parent",
+    "findings.json": "parent",
+    "REPORT.md": "parent",
+    "FINDINGS-DETAIL.md": "parent",
+    "NEEDS-VALIDATION.md": "parent"
+  },
+  "run_status": "complete",
+  "output_directory": "/workspace/tryouts/security-audit-skill/audit/run-1",
+  "skill_directory": "/workspace/tryouts/security-audit-skill/.agents/skills/security-audit",
+  "skill_commit": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+  "profile_reason": "The target is one library file. SKILL.md defines quick for a small target and a fast first look.",
+  "agent_invocations": {
+    "reconnaissance": [
+      "recon-1a",
+      "recon-1b",
+      "recon-1c",
+      "recon-1d"
+    ],
+    "hunting": [
+      "hunter-injection",
+      "hunter-files",
+      "hunter-secrets",
+      "hunter-obvious",
+      "hunter-wildcard"
+    ],
+    "critic": [
+      "critic-wave-1"
+    ],
+    "verification": [
+      "verifier-sql",
+      "verifier-file"
+    ],
+    "note": "Quick profile merges phase 3 and phase 5 into one verifier per candidate. Claude Opus was unavailable, so every agent used grok-4.7-xhigh in a fresh session."
+  },
+  "sandbox": {
+    "executed_target": false,
+    "reason": "scratch-only writes, disk quota, and cgroup limits were not all enforceable"
+  }
+}
