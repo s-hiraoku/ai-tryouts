@@ -1,0 +1,10 @@
+---
+name: tryout-checklist
+description: Check that the tryout skill marker is present. Use when reviewing files under tryouts/agnostic-ai.
+---
+
+# tryout-checklist
+
+1. 生成された skill を開く。
+2. 本文に TRYOUT_SKILL_MARKER があることを見る。
+3. 無いときは、この spec を直してから sync する。
