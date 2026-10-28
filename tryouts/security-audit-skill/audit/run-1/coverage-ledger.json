@@ -1,0 +1,3130 @@
+[
+  {
+    "coverage_id": "sample%23repository-tree::sample%23source-literals::profile%2Fquick%2Fall-in-scope-subsystems::ATTACK-CLASSES.md%23Obvious%20things",
+    "canonical_refs": {
+      "surface": "sample#repository-tree",
+      "boundary": "sample#source-literals",
+      "subsystem": "profile/quick/all-in-scope-subsystems",
+      "attack_class": "ATTACK-CLASSES.md#Obvious things"
+    },
+    "surface": "repository tree of fixture-library",
+    "boundary": "literals and calls visible in the sample files",
+    "subsystem": "all in-scope subsystems",
+    "attack_class": "Obvious things",
+    "starting_paths": [
+      "src/library.js",
+      "README.md",
+      "package.json",
+      "data/user-files/hello.txt",
+      "data/public/readme.txt",
+      "data/public/notes.txt",
+      "data/private/payroll.txt"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Obvious things",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "AI-AND-LLM.md#Core discipline",
+        "reason": "No model, prompt, tool, or agent call is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Context, retrieval, and memory attack classes",
+        "reason": "No retrieval or memory store is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Tool and action attack classes",
+        "reason": "No tool schema or model-controlled action is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#MCP and sub-agent trust classes",
+        "reason": "No MCP server or client is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Output and disclosure attack classes",
+        "reason": "No model output is handled in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Universal moves",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "AI-AND-LLM.md#Validation rules",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Core discipline",
+        "reason": "No browser DOM, extension, or webview is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#DOM and object-state attack classes",
+        "reason": "No DOM or client object state is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-origin messaging and network attack classes",
+        "reason": "No browser messaging is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Service-worker and browser-storage attack classes",
+        "reason": "No service worker or browser storage is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-site information leak classes",
+        "reason": "No browser document is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#UI-redress and navigation attack classes",
+        "reason": "No UI frame or navigation is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Universal moves",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Validation rules",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Core discipline",
+        "reason": "No IAM, container, or cloud config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Workload identity and IAM attack classes",
+        "reason": "No workload identity is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Ingress, network, and control-plane attack classes",
+        "reason": "No ingress or control plane is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Container and orchestration attack classes",
+        "reason": "No container manifest is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Configuration and secret lifecycle attack classes",
+        "reason": "No cloud secret store is in the sample. The source literal is covered by Cryptography and secrets."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Managed storage, events, and edge attack classes",
+        "reason": "No managed storage or edge config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Universal moves",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Validation rules",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+        "reason": "No tenant store, export, backup, or deletion flow is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Tenant and object-isolation attack classes",
+        "reason": "No tenant identifier is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Derived-data and disclosure attack classes",
+        "reason": "No cache, search, or analytics copy is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Export, backup, restore, and migration attack classes",
+        "reason": "No export or restore path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Deletion, revocation, and lifecycle attack classes",
+        "reason": "No deletion or revocation path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+        "reason": "No deep link, webview, or local IPC endpoint is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Deep-link, callback, and navigation attack classes",
+        "reason": "No deep link is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Webview and native-bridge attack classes",
+        "reason": "No webview bridge is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Local IPC and exported-component attack classes",
+        "reason": "No local IPC socket is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Privileged-helper and local-file attack classes",
+        "reason": "File reads are covered by Resource and file handling. No privileged helper exists."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Application-state and device-lifecycle attack classes",
+        "reason": "No device lifecycle is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+        "reason": "The only code is JavaScript. No unsafe native or kernel code is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Bounds, integer, and representation attack classes",
+        "reason": "No native memory operation is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Lifetime, type, and concurrency attack classes",
+        "reason": "No native lifetime or lock is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#FFI and ABI attack classes",
+        "reason": "No FFI boundary is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Binary loading and runtime attack classes",
+        "reason": "No binary loader is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Kernel and privileged-interface attack classes",
+        "reason": "No kernel interface is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Validation rules",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Core discipline",
+        "reason": "No RPC schema, broker, or custom framing parser is in the sample. db.query is a host callback."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Framing, schema, and interpretation attack classes",
+        "reason": "No protocol schema is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#RPC identity and authorization attack classes",
+        "reason": "No RPC identity is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Broker and queue isolation attack classes",
+        "reason": "No broker or queue is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Replay, ordering, and transaction attack classes",
+        "reason": "No message transaction is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Universal moves",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Validation rules",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+        "reason": "No shared worker, quota, or queue is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Computational amplification attack classes",
+        "reason": "No parser loop over untrusted structure is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Resource accumulation attack classes",
+        "reason": "No accumulation store is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Quota and scheduling attack classes",
+        "reason": "No quota is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Failure and recovery attack classes",
+        "reason": "No recovery workflow is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+        "reason": "package.json has no dependencies, scripts, or CI config."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Dependency and build-input attack classes",
+        "reason": "No third-party dependency is declared."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#CI and automation attack classes",
+        "reason": "No CI workflow is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Release and update attack classes",
+        "reason": "No release or updater is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Core discipline",
+        "reason": "No HTTP server or parser is in the sample. request.query is already split by the host."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#HTTP framing and cache attack classes",
+        "reason": "No HTTP parser or cache is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Browser-session attack classes",
+        "reason": "No cookie or session is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Federated-identity attack classes",
+        "reason": "No OAuth, OIDC, or SAML flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#MFA, passkey, and account-transition attack classes",
+        "reason": "No account recovery flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#API-key and mTLS attack classes",
+        "reason": "The bearer string is a source literal covered by Cryptography and secrets, not an HTTP authentication protocol."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Universal moves",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Validation rules",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "Not this unit. Injection units cover findUserByName, findUserById, and describeLookup."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "The library has no authentication or authorization check. The host is the only caller, and no protected role is defined."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "Not this unit. File units cover readUserFile and readPublicDoc."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "Not this unit. The credential literal is covered by the authorizationHeader unit."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No multi-step workflow, quantity, expiry, or fallback role is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No export, search, preview, notification, or webhook feature is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No second component consumes the output of the first as a stronger guarantee."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "Not this unit. One Wildcard unit covers behavior outside the assigned classes."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunter-obvious",
+    "reviewed_paths": [
+      "README.md",
+      "data/private/payroll.txt",
+      "data/public/notes.txt",
+      "data/public/readme.txt",
+      "data/user-files/hello.txt",
+      "package.json",
+      "src/library.js"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunter-obvious",
+        "reviewed_paths": [
+          "README.md",
+          "data/private/payroll.txt",
+          "data/public/notes.txt",
+          "data/public/readme.txt",
+          "data/user-files/hello.txt",
+          "package.json",
+          "src/library.js"
+        ],
+        "invariant": "Sample literals owned by this unit contain no hardcoded password, API key, token, or secret. The API_TOKEN literal is owned by the Cryptography and secrets unit.",
+        "method": "source",
+        "result": "The only credential-like literal is API_TOKEN assigned DUMMY_NOT_A_REAL_KEY at src/library.js:44. This unit does not file it. No password, PEM block, or other token literal appears in the seven sample files.",
+        "artifact": null
+      },
+      {
+        "agent_id": "hunter-obvious",
+        "reviewed_paths": [
+          "README.md",
+          "package.json",
+          "src/library.js"
+        ],
+        "invariant": "The checklist items for debug mode, endpoints, eval, CORS, cookies, redirects, TLS, and error leakage have no matching sink in this library.",
+        "method": "source",
+        "result": "The sample has no server, no process.env read, no eval or child_process, no CORS or cookie header, no redirect parameter, and one static Error('unknown document'). package.json has no dependencies. There is no .gitignore and also no .env or key file.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunter-obvious",
+    "hardening": [
+      "The sample tree has no .gitignore and also has no .env, credentials, pem, or key file."
+    ]
+  },
+  {
+    "coverage_id": "src%2Flibrary.js%23authorizationHeader::src%2Flibrary.js%23API_TOKEN::profile%2Fquick%2Fall-in-scope-subsystems::ATTACK-CLASSES.md%23Cryptography%20and%20secrets",
+    "canonical_refs": {
+      "surface": "src/library.js#authorizationHeader",
+      "boundary": "src/library.js#API_TOKEN",
+      "subsystem": "profile/quick/all-in-scope-subsystems",
+      "attack_class": "ATTACK-CLASSES.md#Cryptography and secrets"
+    },
+    "surface": "authorizationHeader returns a bearer string",
+    "boundary": "API_TOKEN is a literal in source",
+    "subsystem": "all in-scope subsystems",
+    "attack_class": "Cryptography and secrets",
+    "starting_paths": [
+      "src/library.js",
+      "README.md"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Cryptography and secrets",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "AI-AND-LLM.md#Core discipline",
+        "reason": "No model, prompt, tool, or agent call is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Context, retrieval, and memory attack classes",
+        "reason": "No retrieval or memory store is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Tool and action attack classes",
+        "reason": "No tool schema or model-controlled action is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#MCP and sub-agent trust classes",
+        "reason": "No MCP server or client is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Output and disclosure attack classes",
+        "reason": "No model output is handled in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Universal moves",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "AI-AND-LLM.md#Validation rules",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Core discipline",
+        "reason": "No browser DOM, extension, or webview is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#DOM and object-state attack classes",
+        "reason": "No DOM or client object state is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-origin messaging and network attack classes",
+        "reason": "No browser messaging is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Service-worker and browser-storage attack classes",
+        "reason": "No service worker or browser storage is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-site information leak classes",
+        "reason": "No browser document is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#UI-redress and navigation attack classes",
+        "reason": "No UI frame or navigation is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Universal moves",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Validation rules",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Core discipline",
+        "reason": "No IAM, container, or cloud config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Workload identity and IAM attack classes",
+        "reason": "No workload identity is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Ingress, network, and control-plane attack classes",
+        "reason": "No ingress or control plane is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Container and orchestration attack classes",
+        "reason": "No container manifest is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Configuration and secret lifecycle attack classes",
+        "reason": "No cloud secret store is in the sample. The source literal is covered by Cryptography and secrets."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Managed storage, events, and edge attack classes",
+        "reason": "No managed storage or edge config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Universal moves",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Validation rules",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+        "reason": "No tenant store, export, backup, or deletion flow is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Tenant and object-isolation attack classes",
+        "reason": "No tenant identifier is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Derived-data and disclosure attack classes",
+        "reason": "No cache, search, or analytics copy is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Export, backup, restore, and migration attack classes",
+        "reason": "No export or restore path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Deletion, revocation, and lifecycle attack classes",
+        "reason": "No deletion or revocation path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+        "reason": "No deep link, webview, or local IPC endpoint is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Deep-link, callback, and navigation attack classes",
+        "reason": "No deep link is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Webview and native-bridge attack classes",
+        "reason": "No webview bridge is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Local IPC and exported-component attack classes",
+        "reason": "No local IPC socket is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Privileged-helper and local-file attack classes",
+        "reason": "File reads are covered by Resource and file handling. No privileged helper exists."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Application-state and device-lifecycle attack classes",
+        "reason": "No device lifecycle is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+        "reason": "The only code is JavaScript. No unsafe native or kernel code is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Bounds, integer, and representation attack classes",
+        "reason": "No native memory operation is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Lifetime, type, and concurrency attack classes",
+        "reason": "No native lifetime or lock is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#FFI and ABI attack classes",
+        "reason": "No FFI boundary is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Binary loading and runtime attack classes",
+        "reason": "No binary loader is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Kernel and privileged-interface attack classes",
+        "reason": "No kernel interface is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Validation rules",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Core discipline",
+        "reason": "No RPC schema, broker, or custom framing parser is in the sample. db.query is a host callback."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Framing, schema, and interpretation attack classes",
+        "reason": "No protocol schema is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#RPC identity and authorization attack classes",
+        "reason": "No RPC identity is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Broker and queue isolation attack classes",
+        "reason": "No broker or queue is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Replay, ordering, and transaction attack classes",
+        "reason": "No message transaction is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Universal moves",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Validation rules",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+        "reason": "No shared worker, quota, or queue is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Computational amplification attack classes",
+        "reason": "No parser loop over untrusted structure is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Resource accumulation attack classes",
+        "reason": "No accumulation store is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Quota and scheduling attack classes",
+        "reason": "No quota is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Failure and recovery attack classes",
+        "reason": "No recovery workflow is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+        "reason": "package.json has no dependencies, scripts, or CI config."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Dependency and build-input attack classes",
+        "reason": "No third-party dependency is declared."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#CI and automation attack classes",
+        "reason": "No CI workflow is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Release and update attack classes",
+        "reason": "No release or updater is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Core discipline",
+        "reason": "No HTTP server or parser is in the sample. request.query is already split by the host."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#HTTP framing and cache attack classes",
+        "reason": "No HTTP parser or cache is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Browser-session attack classes",
+        "reason": "No cookie or session is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Federated-identity attack classes",
+        "reason": "No OAuth, OIDC, or SAML flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#MFA, passkey, and account-transition attack classes",
+        "reason": "No account recovery flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#API-key and mTLS attack classes",
+        "reason": "The bearer string is a source literal covered by Cryptography and secrets, not an HTTP authentication protocol."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Universal moves",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Validation rules",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "Not this unit. Injection units cover findUserByName, findUserById, and describeLookup."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "The library has no authentication or authorization check. The host is the only caller, and no protected role is defined."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "Not this unit. File units cover readUserFile and readPublicDoc."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No multi-step workflow, quantity, expiry, or fallback role is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No export, search, preview, notification, or webhook feature is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No second component consumes the output of the first as a stronger guarantee."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "Not this unit. One Wildcard unit covers behavior outside the assigned classes."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "Not this unit. One Obvious things unit covers the repository-wide checklist."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunter-secrets",
+    "reviewed_paths": [
+      "src/library.js",
+      "README.md"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunter-secrets",
+        "reviewed_paths": [
+          "src/library.js",
+          "README.md"
+        ],
+        "invariant": "authorizationHeader exposes a usable credential only if API_TOKEN is a real secret and a lower-trust principal can observe it through a log, error, URL, or client-visible response.",
+        "method": "source",
+        "result": "src/library.js:44 assigns API_TOKEN the literal DUMMY_NOT_A_REAL_KEY. authorizationHeader at src/library.js:46-47 takes no arguments and returns the string Bearer concatenated with that literal, with no log, throw, URL, filesystem write, or network send. src/library.js:57 exports the function to the host. README.md:3 states the sample has no server, and README.md:9 states the function builds a header string for the host to send. request.query cannot reach this export.",
+        "artifact": null
+      },
+      {
+        "agent_id": "hunter-secrets",
+        "reviewed_paths": [
+          "src/library.js"
+        ],
+        "invariant": "Security-critical tokens and nonces in this unit come from a cryptographic generator.",
+        "method": "source",
+        "result": "The bearer value is the constant API_TOKEN at src/library.js:44. src/library.js contains no Math.random call, no crypto module load, and no nonce or token generator. The requires at src/library.js:3-4 are fs and path only.",
+        "artifact": null
+      },
+      {
+        "agent_id": "hunter-secrets",
+        "reviewed_paths": [
+          "src/library.js"
+        ],
+        "invariant": "Key derivation, HMAC, secret comparison, cipher use, and crypto failure handling in this unit keep verification and confidentiality intact.",
+        "method": "source",
+        "result": "src/library.js contains no key derivation, HMAC, secret comparison, cipher, mode, IV, or nonce. authorizationHeader at src/library.js:46-47 has one return and no failure branch that could skip cryptography.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunter-secrets",
+    "hardening": []
+  },
+  {
+    "coverage_id": "src%2Flibrary.js%23describeLookup::src%2Flibrary.js%23describeLookup%20return::profile%2Fquick%2Fall-in-scope-subsystems::ATTACK-CLASSES.md%23Injection",
+    "canonical_refs": {
+      "surface": "src/library.js#describeLookup",
+      "boundary": "src/library.js#describeLookup return",
+      "subsystem": "profile/quick/all-in-scope-subsystems",
+      "attack_class": "ATTACK-CLASSES.md#Injection"
+    },
+    "surface": "describeLookup concatenates a caller name into a returned string",
+    "boundary": "the return value is not passed to SQL, the filesystem, or a command",
+    "subsystem": "all in-scope subsystems",
+    "attack_class": "Injection",
+    "starting_paths": [
+      "src/library.js",
+      "README.md"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Injection",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "AI-AND-LLM.md#Core discipline",
+        "reason": "No model, prompt, tool, or agent call is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Context, retrieval, and memory attack classes",
+        "reason": "No retrieval or memory store is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Tool and action attack classes",
+        "reason": "No tool schema or model-controlled action is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#MCP and sub-agent trust classes",
+        "reason": "No MCP server or client is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Output and disclosure attack classes",
+        "reason": "No model output is handled in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Universal moves",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "AI-AND-LLM.md#Validation rules",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Core discipline",
+        "reason": "No browser DOM, extension, or webview is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#DOM and object-state attack classes",
+        "reason": "No DOM or client object state is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-origin messaging and network attack classes",
+        "reason": "No browser messaging is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Service-worker and browser-storage attack classes",
+        "reason": "No service worker or browser storage is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-site information leak classes",
+        "reason": "No browser document is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#UI-redress and navigation attack classes",
+        "reason": "No UI frame or navigation is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Universal moves",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Validation rules",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Core discipline",
+        "reason": "No IAM, container, or cloud config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Workload identity and IAM attack classes",
+        "reason": "No workload identity is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Ingress, network, and control-plane attack classes",
+        "reason": "No ingress or control plane is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Container and orchestration attack classes",
+        "reason": "No container manifest is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Configuration and secret lifecycle attack classes",
+        "reason": "No cloud secret store is in the sample. The source literal is covered by Cryptography and secrets."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Managed storage, events, and edge attack classes",
+        "reason": "No managed storage or edge config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Universal moves",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Validation rules",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+        "reason": "No tenant store, export, backup, or deletion flow is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Tenant and object-isolation attack classes",
+        "reason": "No tenant identifier is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Derived-data and disclosure attack classes",
+        "reason": "No cache, search, or analytics copy is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Export, backup, restore, and migration attack classes",
+        "reason": "No export or restore path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Deletion, revocation, and lifecycle attack classes",
+        "reason": "No deletion or revocation path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+        "reason": "No deep link, webview, or local IPC endpoint is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Deep-link, callback, and navigation attack classes",
+        "reason": "No deep link is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Webview and native-bridge attack classes",
+        "reason": "No webview bridge is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Local IPC and exported-component attack classes",
+        "reason": "No local IPC socket is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Privileged-helper and local-file attack classes",
+        "reason": "File reads are covered by Resource and file handling. No privileged helper exists."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Application-state and device-lifecycle attack classes",
+        "reason": "No device lifecycle is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+        "reason": "The only code is JavaScript. No unsafe native or kernel code is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Bounds, integer, and representation attack classes",
+        "reason": "No native memory operation is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Lifetime, type, and concurrency attack classes",
+        "reason": "No native lifetime or lock is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#FFI and ABI attack classes",
+        "reason": "No FFI boundary is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Binary loading and runtime attack classes",
+        "reason": "No binary loader is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Kernel and privileged-interface attack classes",
+        "reason": "No kernel interface is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Validation rules",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Core discipline",
+        "reason": "No RPC schema, broker, or custom framing parser is in the sample. db.query is a host callback."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Framing, schema, and interpretation attack classes",
+        "reason": "No protocol schema is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#RPC identity and authorization attack classes",
+        "reason": "No RPC identity is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Broker and queue isolation attack classes",
+        "reason": "No broker or queue is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Replay, ordering, and transaction attack classes",
+        "reason": "No message transaction is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Universal moves",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Validation rules",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+        "reason": "No shared worker, quota, or queue is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Computational amplification attack classes",
+        "reason": "No parser loop over untrusted structure is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Resource accumulation attack classes",
+        "reason": "No accumulation store is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Quota and scheduling attack classes",
+        "reason": "No quota is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Failure and recovery attack classes",
+        "reason": "No recovery workflow is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+        "reason": "package.json has no dependencies, scripts, or CI config."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Dependency and build-input attack classes",
+        "reason": "No third-party dependency is declared."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#CI and automation attack classes",
+        "reason": "No CI workflow is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Release and update attack classes",
+        "reason": "No release or updater is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Core discipline",
+        "reason": "No HTTP server or parser is in the sample. request.query is already split by the host."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#HTTP framing and cache attack classes",
+        "reason": "No HTTP parser or cache is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Browser-session attack classes",
+        "reason": "No cookie or session is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Federated-identity attack classes",
+        "reason": "No OAuth, OIDC, or SAML flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#MFA, passkey, and account-transition attack classes",
+        "reason": "No account recovery flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#API-key and mTLS attack classes",
+        "reason": "The bearer string is a source literal covered by Cryptography and secrets, not an HTTP authentication protocol."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Universal moves",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Validation rules",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "The library has no authentication or authorization check. The host is the only caller, and no protected role is defined."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "Not this unit. File units cover readUserFile and readPublicDoc."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "Not this unit. The credential literal is covered by the authorizationHeader unit."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No multi-step workflow, quantity, expiry, or fallback role is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No export, search, preview, notification, or webhook feature is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No second component consumes the output of the first as a stronger guarantee."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "Not this unit. One Wildcard unit covers behavior outside the assigned classes."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "Not this unit. One Obvious things unit covers the repository-wide checklist."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunter-injection",
+    "reviewed_paths": [
+      "src/library.js",
+      "README.md"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunter-injection",
+        "reviewed_paths": [
+          "src/library.js",
+          "README.md"
+        ],
+        "invariant": "The string returned by describeLookup does not reach a SQL, filesystem, command, template, or header sink in this library.",
+        "method": "source",
+        "result": "describeLookup returns the concatenation of the literal lookup and request.query.name and calls no other function. That return value is not passed to db.query, fs.readFileSync, or a command. README.md names no interpreter for this return value. request.query.name is untrusted, and this function still has no injection sink.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunter-injection",
+    "hardening": []
+  },
+  {
+    "coverage_id": "src%2Flibrary.js%23findUserById::src%2Flibrary.js%23findUserById%20db.query::profile%2Fquick%2Fall-in-scope-subsystems::ATTACK-CLASSES.md%23Injection",
+    "canonical_refs": {
+      "surface": "src/library.js#findUserById",
+      "boundary": "src/library.js#findUserById db.query",
+      "subsystem": "profile/quick/all-in-scope-subsystems",
+      "attack_class": "ATTACK-CLASSES.md#Injection"
+    },
+    "surface": "findUserById passes a caller id as a bound parameter",
+    "boundary": "db.query receives a constant SQL text and a parameter array",
+    "subsystem": "all in-scope subsystems",
+    "attack_class": "Injection",
+    "starting_paths": [
+      "src/library.js",
+      "README.md"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Injection",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "AI-AND-LLM.md#Core discipline",
+        "reason": "No model, prompt, tool, or agent call is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Context, retrieval, and memory attack classes",
+        "reason": "No retrieval or memory store is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Tool and action attack classes",
+        "reason": "No tool schema or model-controlled action is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#MCP and sub-agent trust classes",
+        "reason": "No MCP server or client is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Output and disclosure attack classes",
+        "reason": "No model output is handled in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Universal moves",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "AI-AND-LLM.md#Validation rules",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Core discipline",
+        "reason": "No browser DOM, extension, or webview is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#DOM and object-state attack classes",
+        "reason": "No DOM or client object state is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-origin messaging and network attack classes",
+        "reason": "No browser messaging is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Service-worker and browser-storage attack classes",
+        "reason": "No service worker or browser storage is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-site information leak classes",
+        "reason": "No browser document is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#UI-redress and navigation attack classes",
+        "reason": "No UI frame or navigation is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Universal moves",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Validation rules",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Core discipline",
+        "reason": "No IAM, container, or cloud config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Workload identity and IAM attack classes",
+        "reason": "No workload identity is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Ingress, network, and control-plane attack classes",
+        "reason": "No ingress or control plane is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Container and orchestration attack classes",
+        "reason": "No container manifest is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Configuration and secret lifecycle attack classes",
+        "reason": "No cloud secret store is in the sample. The source literal is covered by Cryptography and secrets."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Managed storage, events, and edge attack classes",
+        "reason": "No managed storage or edge config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Universal moves",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Validation rules",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+        "reason": "No tenant store, export, backup, or deletion flow is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Tenant and object-isolation attack classes",
+        "reason": "No tenant identifier is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Derived-data and disclosure attack classes",
+        "reason": "No cache, search, or analytics copy is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Export, backup, restore, and migration attack classes",
+        "reason": "No export or restore path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Deletion, revocation, and lifecycle attack classes",
+        "reason": "No deletion or revocation path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+        "reason": "No deep link, webview, or local IPC endpoint is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Deep-link, callback, and navigation attack classes",
+        "reason": "No deep link is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Webview and native-bridge attack classes",
+        "reason": "No webview bridge is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Local IPC and exported-component attack classes",
+        "reason": "No local IPC socket is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Privileged-helper and local-file attack classes",
+        "reason": "File reads are covered by Resource and file handling. No privileged helper exists."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Application-state and device-lifecycle attack classes",
+        "reason": "No device lifecycle is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+        "reason": "The only code is JavaScript. No unsafe native or kernel code is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Bounds, integer, and representation attack classes",
+        "reason": "No native memory operation is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Lifetime, type, and concurrency attack classes",
+        "reason": "No native lifetime or lock is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#FFI and ABI attack classes",
+        "reason": "No FFI boundary is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Binary loading and runtime attack classes",
+        "reason": "No binary loader is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Kernel and privileged-interface attack classes",
+        "reason": "No kernel interface is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Validation rules",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Core discipline",
+        "reason": "No RPC schema, broker, or custom framing parser is in the sample. db.query is a host callback."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Framing, schema, and interpretation attack classes",
+        "reason": "No protocol schema is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#RPC identity and authorization attack classes",
+        "reason": "No RPC identity is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Broker and queue isolation attack classes",
+        "reason": "No broker or queue is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Replay, ordering, and transaction attack classes",
+        "reason": "No message transaction is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Universal moves",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Validation rules",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+        "reason": "No shared worker, quota, or queue is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Computational amplification attack classes",
+        "reason": "No parser loop over untrusted structure is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Resource accumulation attack classes",
+        "reason": "No accumulation store is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Quota and scheduling attack classes",
+        "reason": "No quota is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Failure and recovery attack classes",
+        "reason": "No recovery workflow is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+        "reason": "package.json has no dependencies, scripts, or CI config."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Dependency and build-input attack classes",
+        "reason": "No third-party dependency is declared."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#CI and automation attack classes",
+        "reason": "No CI workflow is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Release and update attack classes",
+        "reason": "No release or updater is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Core discipline",
+        "reason": "No HTTP server or parser is in the sample. request.query is already split by the host."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#HTTP framing and cache attack classes",
+        "reason": "No HTTP parser or cache is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Browser-session attack classes",
+        "reason": "No cookie or session is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Federated-identity attack classes",
+        "reason": "No OAuth, OIDC, or SAML flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#MFA, passkey, and account-transition attack classes",
+        "reason": "No account recovery flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#API-key and mTLS attack classes",
+        "reason": "The bearer string is a source literal covered by Cryptography and secrets, not an HTTP authentication protocol."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Universal moves",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Validation rules",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "The library has no authentication or authorization check. The host is the only caller, and no protected role is defined."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "Not this unit. File units cover readUserFile and readPublicDoc."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "Not this unit. The credential literal is covered by the authorizationHeader unit."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No multi-step workflow, quantity, expiry, or fallback role is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No export, search, preview, notification, or webhook feature is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No second component consumes the output of the first as a stronger guarantee."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "Not this unit. One Wildcard unit covers behavior outside the assigned classes."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "Not this unit. One Obvious things unit covers the repository-wide checklist."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunter-injection",
+    "reviewed_paths": [
+      "src/library.js",
+      "README.md"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunter-injection",
+        "reviewed_paths": [
+          "src/library.js",
+          "README.md"
+        ],
+        "invariant": "A caller-supplied id does not change the SQL text sent to db.query.",
+        "method": "source",
+        "result": "findUserById calls db.query with the constant statement SELECT id, name FROM users WHERE id = ? and the array [id]. README.md states that a second argument is the bound parameter list. The id value is not concatenated into the statement. handleLookup passes request.query.id into this function only when id is an own property of request.query.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunter-injection",
+    "hardening": []
+  },
+  {
+    "coverage_id": "src%2Flibrary.js%23findUserByName::src%2Flibrary.js%23findUserByName%20db.query::profile%2Fquick%2Fall-in-scope-subsystems::ATTACK-CLASSES.md%23Injection",
+    "canonical_refs": {
+      "surface": "src/library.js#findUserByName",
+      "boundary": "src/library.js#findUserByName db.query",
+      "subsystem": "profile/quick/all-in-scope-subsystems",
+      "attack_class": "ATTACK-CLASSES.md#Injection"
+    },
+    "surface": "findUserByName concatenates a caller name into SQL",
+    "boundary": "db.query receives that SQL text as its only argument",
+    "subsystem": "all in-scope subsystems",
+    "attack_class": "Injection",
+    "starting_paths": [
+      "src/library.js",
+      "README.md"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Injection",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "AI-AND-LLM.md#Core discipline",
+        "reason": "No model, prompt, tool, or agent call is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Context, retrieval, and memory attack classes",
+        "reason": "No retrieval or memory store is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Tool and action attack classes",
+        "reason": "No tool schema or model-controlled action is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#MCP and sub-agent trust classes",
+        "reason": "No MCP server or client is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Output and disclosure attack classes",
+        "reason": "No model output is handled in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Universal moves",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "AI-AND-LLM.md#Validation rules",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Core discipline",
+        "reason": "No browser DOM, extension, or webview is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#DOM and object-state attack classes",
+        "reason": "No DOM or client object state is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-origin messaging and network attack classes",
+        "reason": "No browser messaging is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Service-worker and browser-storage attack classes",
+        "reason": "No service worker or browser storage is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-site information leak classes",
+        "reason": "No browser document is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#UI-redress and navigation attack classes",
+        "reason": "No UI frame or navigation is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Universal moves",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Validation rules",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Core discipline",
+        "reason": "No IAM, container, or cloud config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Workload identity and IAM attack classes",
+        "reason": "No workload identity is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Ingress, network, and control-plane attack classes",
+        "reason": "No ingress or control plane is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Container and orchestration attack classes",
+        "reason": "No container manifest is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Configuration and secret lifecycle attack classes",
+        "reason": "No cloud secret store is in the sample. The source literal is covered by Cryptography and secrets."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Managed storage, events, and edge attack classes",
+        "reason": "No managed storage or edge config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Universal moves",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Validation rules",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+        "reason": "No tenant store, export, backup, or deletion flow is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Tenant and object-isolation attack classes",
+        "reason": "No tenant identifier is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Derived-data and disclosure attack classes",
+        "reason": "No cache, search, or analytics copy is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Export, backup, restore, and migration attack classes",
+        "reason": "No export or restore path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Deletion, revocation, and lifecycle attack classes",
+        "reason": "No deletion or revocation path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+        "reason": "No deep link, webview, or local IPC endpoint is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Deep-link, callback, and navigation attack classes",
+        "reason": "No deep link is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Webview and native-bridge attack classes",
+        "reason": "No webview bridge is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Local IPC and exported-component attack classes",
+        "reason": "No local IPC socket is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Privileged-helper and local-file attack classes",
+        "reason": "File reads are covered by Resource and file handling. No privileged helper exists."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Application-state and device-lifecycle attack classes",
+        "reason": "No device lifecycle is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+        "reason": "The only code is JavaScript. No unsafe native or kernel code is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Bounds, integer, and representation attack classes",
+        "reason": "No native memory operation is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Lifetime, type, and concurrency attack classes",
+        "reason": "No native lifetime or lock is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#FFI and ABI attack classes",
+        "reason": "No FFI boundary is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Binary loading and runtime attack classes",
+        "reason": "No binary loader is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Kernel and privileged-interface attack classes",
+        "reason": "No kernel interface is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Validation rules",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Core discipline",
+        "reason": "No RPC schema, broker, or custom framing parser is in the sample. db.query is a host callback."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Framing, schema, and interpretation attack classes",
+        "reason": "No protocol schema is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#RPC identity and authorization attack classes",
+        "reason": "No RPC identity is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Broker and queue isolation attack classes",
+        "reason": "No broker or queue is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Replay, ordering, and transaction attack classes",
+        "reason": "No message transaction is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Universal moves",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Validation rules",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+        "reason": "No shared worker, quota, or queue is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Computational amplification attack classes",
+        "reason": "No parser loop over untrusted structure is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Resource accumulation attack classes",
+        "reason": "No accumulation store is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Quota and scheduling attack classes",
+        "reason": "No quota is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Failure and recovery attack classes",
+        "reason": "No recovery workflow is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+        "reason": "package.json has no dependencies, scripts, or CI config."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Dependency and build-input attack classes",
+        "reason": "No third-party dependency is declared."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#CI and automation attack classes",
+        "reason": "No CI workflow is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Release and update attack classes",
+        "reason": "No release or updater is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Core discipline",
+        "reason": "No HTTP server or parser is in the sample. request.query is already split by the host."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#HTTP framing and cache attack classes",
+        "reason": "No HTTP parser or cache is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Browser-session attack classes",
+        "reason": "No cookie or session is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Federated-identity attack classes",
+        "reason": "No OAuth, OIDC, or SAML flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#MFA, passkey, and account-transition attack classes",
+        "reason": "No account recovery flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#API-key and mTLS attack classes",
+        "reason": "The bearer string is a source literal covered by Cryptography and secrets, not an HTTP authentication protocol."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Universal moves",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Validation rules",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "The library has no authentication or authorization check. The host is the only caller, and no protected role is defined."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "Not this unit. File units cover readUserFile and readPublicDoc."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "Not this unit. The credential literal is covered by the authorizationHeader unit."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No multi-step workflow, quantity, expiry, or fallback role is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No export, search, preview, notification, or webhook feature is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No second component consumes the output of the first as a stronger guarantee."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "Not this unit. One Wildcard unit covers behavior outside the assigned classes."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "Not this unit. One Obvious things unit covers the repository-wide checklist."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "candidate",
+    "agent_id": "hunter-injection",
+    "reviewed_paths": [
+      "src/library.js",
+      "README.md"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunter-injection",
+        "reviewed_paths": [
+          "src/library.js",
+          "README.md"
+        ],
+        "invariant": "A caller-supplied name must not become part of the SQL text passed as db.query's only argument.",
+        "method": "source",
+        "result": "findUserByName assigns sql by concatenating name between single quotes and calls db.query with only that string. README.md states that the first argument is sent to a SQL engine and that a second argument is the bound parameter list. This call passes no second argument. handleLookup reaches it with untrusted request.query.name when id is not an own property of request.query.",
+        "artifact": null
+      },
+      {
+        "agent_id": "hunter-injection",
+        "reviewed_paths": [
+          "src/library.js"
+        ],
+        "invariant": "The id-versus-name branch or a bound parameter list keeps a caller name from changing the SQL statement.",
+        "method": "source",
+        "result": "The own-property test in handleLookup selects findUserById only when request.query has an own id property. On the other path it forwards request.query.name. findUserByName has no parameter array and no escaping. The bound-parameter form is present only in findUserById. findUserByName is exported, so a host can call the concatenation without the id test.",
+        "artifact": null
+      },
+      {
+        "agent_id": "verifier-sql",
+        "reviewed_paths": [
+          "src/library.js",
+          "README.md"
+        ],
+        "invariant": "Independent verifier re-read the cited trace and tried to refute it.",
+        "method": "source",
+        "result": "Kept needs_validation. The name is concatenated into SQL text. No local db.query argument list was observed.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [
+      "src/library.js:findUserByName:name-sql-concatenation"
+    ],
+    "unresolved": [],
+    "assignment_owner": "hunter-injection",
+    "hardening": []
+  },
+  {
+    "coverage_id": "src%2Flibrary.js%23module.exports::sample%23unassigned-behavior::profile%2Fquick%2Fall-in-scope-subsystems::ATTACK-CLASSES.md%23Wildcard",
+    "canonical_refs": {
+      "surface": "src/library.js#module.exports",
+      "boundary": "sample#unassigned-behavior",
+      "subsystem": "profile/quick/all-in-scope-subsystems",
+      "attack_class": "ATTACK-CLASSES.md#Wildcard"
+    },
+    "surface": "exported functions not settled by the assigned classes",
+    "boundary": "behavior with no assigned ordinary class",
+    "subsystem": "all in-scope subsystems",
+    "attack_class": "Wildcard",
+    "starting_paths": [
+      "src/library.js",
+      "README.md",
+      "package.json"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Wildcard",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "AI-AND-LLM.md#Core discipline",
+        "reason": "No model, prompt, tool, or agent call is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Context, retrieval, and memory attack classes",
+        "reason": "No retrieval or memory store is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Tool and action attack classes",
+        "reason": "No tool schema or model-controlled action is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#MCP and sub-agent trust classes",
+        "reason": "No MCP server or client is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Output and disclosure attack classes",
+        "reason": "No model output is handled in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Universal moves",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "AI-AND-LLM.md#Validation rules",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Core discipline",
+        "reason": "No browser DOM, extension, or webview is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#DOM and object-state attack classes",
+        "reason": "No DOM or client object state is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-origin messaging and network attack classes",
+        "reason": "No browser messaging is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Service-worker and browser-storage attack classes",
+        "reason": "No service worker or browser storage is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-site information leak classes",
+        "reason": "No browser document is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#UI-redress and navigation attack classes",
+        "reason": "No UI frame or navigation is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Universal moves",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Validation rules",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Core discipline",
+        "reason": "No IAM, container, or cloud config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Workload identity and IAM attack classes",
+        "reason": "No workload identity is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Ingress, network, and control-plane attack classes",
+        "reason": "No ingress or control plane is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Container and orchestration attack classes",
+        "reason": "No container manifest is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Configuration and secret lifecycle attack classes",
+        "reason": "No cloud secret store is in the sample. The source literal is covered by Cryptography and secrets."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Managed storage, events, and edge attack classes",
+        "reason": "No managed storage or edge config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Universal moves",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Validation rules",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+        "reason": "No tenant store, export, backup, or deletion flow is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Tenant and object-isolation attack classes",
+        "reason": "No tenant identifier is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Derived-data and disclosure attack classes",
+        "reason": "No cache, search, or analytics copy is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Export, backup, restore, and migration attack classes",
+        "reason": "No export or restore path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Deletion, revocation, and lifecycle attack classes",
+        "reason": "No deletion or revocation path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+        "reason": "No deep link, webview, or local IPC endpoint is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Deep-link, callback, and navigation attack classes",
+        "reason": "No deep link is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Webview and native-bridge attack classes",
+        "reason": "No webview bridge is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Local IPC and exported-component attack classes",
+        "reason": "No local IPC socket is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Privileged-helper and local-file attack classes",
+        "reason": "File reads are covered by Resource and file handling. No privileged helper exists."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Application-state and device-lifecycle attack classes",
+        "reason": "No device lifecycle is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+        "reason": "The only code is JavaScript. No unsafe native or kernel code is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Bounds, integer, and representation attack classes",
+        "reason": "No native memory operation is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Lifetime, type, and concurrency attack classes",
+        "reason": "No native lifetime or lock is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#FFI and ABI attack classes",
+        "reason": "No FFI boundary is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Binary loading and runtime attack classes",
+        "reason": "No binary loader is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Kernel and privileged-interface attack classes",
+        "reason": "No kernel interface is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Validation rules",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Core discipline",
+        "reason": "No RPC schema, broker, or custom framing parser is in the sample. db.query is a host callback."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Framing, schema, and interpretation attack classes",
+        "reason": "No protocol schema is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#RPC identity and authorization attack classes",
+        "reason": "No RPC identity is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Broker and queue isolation attack classes",
+        "reason": "No broker or queue is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Replay, ordering, and transaction attack classes",
+        "reason": "No message transaction is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Universal moves",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Validation rules",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+        "reason": "No shared worker, quota, or queue is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Computational amplification attack classes",
+        "reason": "No parser loop over untrusted structure is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Resource accumulation attack classes",
+        "reason": "No accumulation store is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Quota and scheduling attack classes",
+        "reason": "No quota is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Failure and recovery attack classes",
+        "reason": "No recovery workflow is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+        "reason": "package.json has no dependencies, scripts, or CI config."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Dependency and build-input attack classes",
+        "reason": "No third-party dependency is declared."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#CI and automation attack classes",
+        "reason": "No CI workflow is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Release and update attack classes",
+        "reason": "No release or updater is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Core discipline",
+        "reason": "No HTTP server or parser is in the sample. request.query is already split by the host."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#HTTP framing and cache attack classes",
+        "reason": "No HTTP parser or cache is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Browser-session attack classes",
+        "reason": "No cookie or session is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Federated-identity attack classes",
+        "reason": "No OAuth, OIDC, or SAML flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#MFA, passkey, and account-transition attack classes",
+        "reason": "No account recovery flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#API-key and mTLS attack classes",
+        "reason": "The bearer string is a source literal covered by Cryptography and secrets, not an HTTP authentication protocol."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Universal moves",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Validation rules",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "Not this unit. Injection units cover findUserByName, findUserById, and describeLookup."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "The library has no authentication or authorization check. The host is the only caller, and no protected role is defined."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Resource and file handling",
+        "reason": "Not this unit. File units cover readUserFile and readPublicDoc."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "Not this unit. The credential literal is covered by the authorizationHeader unit."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No multi-step workflow, quantity, expiry, or fallback role is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No export, search, preview, notification, or webhook feature is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No second component consumes the output of the first as a stronger guarantee."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "Not this unit. One Obvious things unit covers the repository-wide checklist."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunter-wildcard",
+    "reviewed_paths": [
+      "src/library.js",
+      "README.md",
+      "package.json",
+      "data/private/payroll.txt",
+      "data/public/readme.txt",
+      "data/public/notes.txt",
+      "data/user-files/hello.txt"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunter-wildcard",
+        "reviewed_paths": [
+          "src/library.js",
+          "package.json",
+          "README.md"
+        ],
+        "invariant": "The export surface has no hidden entry, dynamic loader, or sink outside the functions already assigned to other classes.",
+        "method": "source",
+        "result": "package.json main is src/library.js and declares no scripts, bin, or dependencies. module.exports lists only findUserByName, findUserById, handleLookup, describeLookup, readUserFile, readPublicDoc, and authorizationHeader. The file requires only fs and path. There is no eval, Function constructor, child process, network call, write, or property merge. README documents no server. Git history is a single add with no reverted control.",
+        "artifact": null
+      },
+      {
+        "agent_id": "hunter-wildcard",
+        "reviewed_paths": [
+          "src/library.js"
+        ],
+        "invariant": "handleLookup does not add a trust failure beyond the peer-owned query functions.",
+        "method": "source",
+        "result": "Object.prototype.hasOwnProperty.call(request.query, 'id') sends an own id to findUserById, whose SQL text stays constant and whose second db.query argument is [id]. Any other query falls through to findUserByName(db, request.query.name). That fallthrough is the same concatenation into db.query already owned by the findUserByName injection unit. An inherited id cannot flip the branch. handleLookup has no other sink.",
+        "artifact": null
+      },
+      {
+        "agent_id": "hunter-wildcard",
+        "reviewed_paths": [
+          "src/library.js",
+          "data/private/payroll.txt",
+          "data/public/readme.txt",
+          "data/public/notes.txt",
+          "data/user-files/hello.txt"
+        ],
+        "invariant": "No unassigned fallback reads, writes, or discloses a resource the assigned file, injection, and credential units do not already own.",
+        "method": "source",
+        "result": "USER_FILES and PUBLIC_DOCS are fixed by path.resolve(__dirname, ...). PUBLIC_NAMES is an exact Set of readme.txt and notes.txt, and readPublicDoc throws before joining any other doc value. payroll.txt is not named by any reader. describeLookup only returns a string and does not call db, fs, or authorizationHeader. authorizationHeader returns Bearer plus the source literal and does not send it. No experimental, compatibility, or cross-feature path remains outside those peer-owned units.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunter-wildcard",
+    "hardening": []
+  },
+  {
+    "coverage_id": "src%2Flibrary.js%23readPublicDoc::src%2Flibrary.js%23PUBLIC_NAMES::profile%2Fquick%2Fall-in-scope-subsystems::ATTACK-CLASSES.md%23Resource%20and%20file%20handling",
+    "canonical_refs": {
+      "surface": "src/library.js#readPublicDoc",
+      "boundary": "src/library.js#PUBLIC_NAMES",
+      "subsystem": "profile/quick/all-in-scope-subsystems",
+      "attack_class": "ATTACK-CLASSES.md#Resource and file handling"
+    },
+    "surface": "readPublicDoc reads a caller name only after an allowlist check",
+    "boundary": "PUBLIC_NAMES allows only readme.txt and notes.txt",
+    "subsystem": "all in-scope subsystems",
+    "attack_class": "Resource and file handling",
+    "starting_paths": [
+      "src/library.js",
+      "README.md",
+      "data/public/readme.txt",
+      "data/public/notes.txt"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "AI-AND-LLM.md#Core discipline",
+        "reason": "No model, prompt, tool, or agent call is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Context, retrieval, and memory attack classes",
+        "reason": "No retrieval or memory store is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Tool and action attack classes",
+        "reason": "No tool schema or model-controlled action is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#MCP and sub-agent trust classes",
+        "reason": "No MCP server or client is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Output and disclosure attack classes",
+        "reason": "No model output is handled in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Universal moves",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "AI-AND-LLM.md#Validation rules",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Core discipline",
+        "reason": "No browser DOM, extension, or webview is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#DOM and object-state attack classes",
+        "reason": "No DOM or client object state is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-origin messaging and network attack classes",
+        "reason": "No browser messaging is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Service-worker and browser-storage attack classes",
+        "reason": "No service worker or browser storage is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-site information leak classes",
+        "reason": "No browser document is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#UI-redress and navigation attack classes",
+        "reason": "No UI frame or navigation is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Universal moves",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Validation rules",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Core discipline",
+        "reason": "No IAM, container, or cloud config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Workload identity and IAM attack classes",
+        "reason": "No workload identity is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Ingress, network, and control-plane attack classes",
+        "reason": "No ingress or control plane is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Container and orchestration attack classes",
+        "reason": "No container manifest is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Configuration and secret lifecycle attack classes",
+        "reason": "No cloud secret store is in the sample. The source literal is covered by Cryptography and secrets."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Managed storage, events, and edge attack classes",
+        "reason": "No managed storage or edge config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Universal moves",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Validation rules",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+        "reason": "No tenant store, export, backup, or deletion flow is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Tenant and object-isolation attack classes",
+        "reason": "No tenant identifier is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Derived-data and disclosure attack classes",
+        "reason": "No cache, search, or analytics copy is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Export, backup, restore, and migration attack classes",
+        "reason": "No export or restore path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Deletion, revocation, and lifecycle attack classes",
+        "reason": "No deletion or revocation path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+        "reason": "No deep link, webview, or local IPC endpoint is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Deep-link, callback, and navigation attack classes",
+        "reason": "No deep link is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Webview and native-bridge attack classes",
+        "reason": "No webview bridge is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Local IPC and exported-component attack classes",
+        "reason": "No local IPC socket is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Privileged-helper and local-file attack classes",
+        "reason": "File reads are covered by Resource and file handling. No privileged helper exists."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Application-state and device-lifecycle attack classes",
+        "reason": "No device lifecycle is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+        "reason": "The only code is JavaScript. No unsafe native or kernel code is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Bounds, integer, and representation attack classes",
+        "reason": "No native memory operation is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Lifetime, type, and concurrency attack classes",
+        "reason": "No native lifetime or lock is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#FFI and ABI attack classes",
+        "reason": "No FFI boundary is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Binary loading and runtime attack classes",
+        "reason": "No binary loader is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Kernel and privileged-interface attack classes",
+        "reason": "No kernel interface is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Validation rules",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Core discipline",
+        "reason": "No RPC schema, broker, or custom framing parser is in the sample. db.query is a host callback."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Framing, schema, and interpretation attack classes",
+        "reason": "No protocol schema is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#RPC identity and authorization attack classes",
+        "reason": "No RPC identity is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Broker and queue isolation attack classes",
+        "reason": "No broker or queue is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Replay, ordering, and transaction attack classes",
+        "reason": "No message transaction is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Universal moves",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Validation rules",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+        "reason": "No shared worker, quota, or queue is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Computational amplification attack classes",
+        "reason": "No parser loop over untrusted structure is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Resource accumulation attack classes",
+        "reason": "No accumulation store is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Quota and scheduling attack classes",
+        "reason": "No quota is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Failure and recovery attack classes",
+        "reason": "No recovery workflow is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+        "reason": "package.json has no dependencies, scripts, or CI config."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Dependency and build-input attack classes",
+        "reason": "No third-party dependency is declared."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#CI and automation attack classes",
+        "reason": "No CI workflow is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Release and update attack classes",
+        "reason": "No release or updater is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Core discipline",
+        "reason": "No HTTP server or parser is in the sample. request.query is already split by the host."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#HTTP framing and cache attack classes",
+        "reason": "No HTTP parser or cache is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Browser-session attack classes",
+        "reason": "No cookie or session is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Federated-identity attack classes",
+        "reason": "No OAuth, OIDC, or SAML flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#MFA, passkey, and account-transition attack classes",
+        "reason": "No account recovery flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#API-key and mTLS attack classes",
+        "reason": "The bearer string is a source literal covered by Cryptography and secrets, not an HTTP authentication protocol."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Universal moves",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Validation rules",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "Not this unit. Injection units cover findUserByName, findUserById, and describeLookup."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "The library has no authentication or authorization check. The host is the only caller, and no protected role is defined."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "Not this unit. The credential literal is covered by the authorizationHeader unit."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No multi-step workflow, quantity, expiry, or fallback role is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No export, search, preview, notification, or webhook feature is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No second component consumes the output of the first as a stronger guarantee."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "Not this unit. One Wildcard unit covers behavior outside the assigned classes."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "Not this unit. One Obvious things unit covers the repository-wide checklist."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunter-files",
+    "reviewed_paths": [
+      "src/library.js",
+      "README.md",
+      "data/public/readme.txt",
+      "data/public/notes.txt"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunter-files",
+        "reviewed_paths": [
+          "src/library.js",
+          "README.md",
+          "data/public/readme.txt",
+          "data/public/notes.txt"
+        ],
+        "invariant": "readPublicDoc reads request.query.doc only after an exact allowlist check that admits only readme.txt and notes.txt.",
+        "method": "source",
+        "result": "PUBLIC_NAMES is a Set of the strings readme.txt and notes.txt. readPublicDoc throws unknown document unless PUBLIC_NAMES.has(name) is true, and only then calls fs.readFileSync on path.join(PUBLIC_DOCS, name). Membership is exact, so a parent segment or other name never reaches the join.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "assignment_owner": "hunter-files",
+    "hardening": []
+  },
+  {
+    "coverage_id": "src%2Flibrary.js%23readUserFile::src%2Flibrary.js%23USER_FILES::profile%2Fquick%2Fall-in-scope-subsystems::ATTACK-CLASSES.md%23Resource%20and%20file%20handling",
+    "canonical_refs": {
+      "surface": "src/library.js#readUserFile",
+      "boundary": "src/library.js#USER_FILES",
+      "subsystem": "profile/quick/all-in-scope-subsystems",
+      "attack_class": "ATTACK-CLASSES.md#Resource and file handling"
+    },
+    "surface": "readUserFile joins a caller path and reads it",
+    "boundary": "the joined path is not checked against data/user-files",
+    "subsystem": "all in-scope subsystems",
+    "attack_class": "Resource and file handling",
+    "starting_paths": [
+      "src/library.js",
+      "README.md",
+      "data/user-files/hello.txt",
+      "data/private/payroll.txt"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "AI-AND-LLM.md#Core discipline",
+        "reason": "No model, prompt, tool, or agent call is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Context, retrieval, and memory attack classes",
+        "reason": "No retrieval or memory store is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Tool and action attack classes",
+        "reason": "No tool schema or model-controlled action is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#MCP and sub-agent trust classes",
+        "reason": "No MCP server or client is in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Output and disclosure attack classes",
+        "reason": "No model output is handled in the sample."
+      },
+      {
+        "block": "AI-AND-LLM.md#Universal moves",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "AI-AND-LLM.md#Validation rules",
+        "reason": "The AI companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Core discipline",
+        "reason": "No browser DOM, extension, or webview is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#DOM and object-state attack classes",
+        "reason": "No DOM or client object state is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-origin messaging and network attack classes",
+        "reason": "No browser messaging is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Service-worker and browser-storage attack classes",
+        "reason": "No service worker or browser storage is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Cross-site information leak classes",
+        "reason": "No browser document is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#UI-redress and navigation attack classes",
+        "reason": "No UI frame or navigation is in the sample."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Universal moves",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLIENT-SIDE.md#Validation rules",
+        "reason": "The client-side companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Core discipline",
+        "reason": "No IAM, container, or cloud config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Workload identity and IAM attack classes",
+        "reason": "No workload identity is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Ingress, network, and control-plane attack classes",
+        "reason": "No ingress or control plane is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Container and orchestration attack classes",
+        "reason": "No container manifest is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Configuration and secret lifecycle attack classes",
+        "reason": "No cloud secret store is in the sample. The source literal is covered by Cryptography and secrets."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Managed storage, events, and edge attack classes",
+        "reason": "No managed storage or edge config is in the sample."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Universal moves",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "CLOUD-AND-DEPLOYMENT.md#Validation rules",
+        "reason": "The cloud companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+        "reason": "No tenant store, export, backup, or deletion flow is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Tenant and object-isolation attack classes",
+        "reason": "No tenant identifier is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Derived-data and disclosure attack classes",
+        "reason": "No cache, search, or analytics copy is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Export, backup, restore, and migration attack classes",
+        "reason": "No export or restore path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Deletion, revocation, and lifecycle attack classes",
+        "reason": "No deletion or revocation path is in the sample."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules",
+        "reason": "The data-lifecycle companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+        "reason": "No deep link, webview, or local IPC endpoint is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Deep-link, callback, and navigation attack classes",
+        "reason": "No deep link is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Webview and native-bridge attack classes",
+        "reason": "No webview bridge is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Local IPC and exported-component attack classes",
+        "reason": "No local IPC socket is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Privileged-helper and local-file attack classes",
+        "reason": "File reads are covered by Resource and file handling. No privileged helper exists."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Application-state and device-lifecycle attack classes",
+        "reason": "No device lifecycle is in the sample."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules",
+        "reason": "The desktop companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Core discipline",
+        "reason": "The only code is JavaScript. No unsafe native or kernel code is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Bounds, integer, and representation attack classes",
+        "reason": "No native memory operation is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Lifetime, type, and concurrency attack classes",
+        "reason": "No native lifetime or lock is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#FFI and ABI attack classes",
+        "reason": "No FFI boundary is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Binary loading and runtime attack classes",
+        "reason": "No binary loader is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Kernel and privileged-interface attack classes",
+        "reason": "No kernel interface is in the sample."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Universal moves",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md#Validation rules",
+        "reason": "The memory-safety companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Core discipline",
+        "reason": "No RPC schema, broker, or custom framing parser is in the sample. db.query is a host callback."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Framing, schema, and interpretation attack classes",
+        "reason": "No protocol schema is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#RPC identity and authorization attack classes",
+        "reason": "No RPC identity is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Broker and queue isolation attack classes",
+        "reason": "No broker or queue is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Replay, ordering, and transaction attack classes",
+        "reason": "No message transaction is in the sample."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Universal moves",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md#Validation rules",
+        "reason": "The protocol companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+        "reason": "No shared worker, quota, or queue is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Computational amplification attack classes",
+        "reason": "No parser loop over untrusted structure is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Resource accumulation attack classes",
+        "reason": "No accumulation store is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Quota and scheduling attack classes",
+        "reason": "No quota is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Failure and recovery attack classes",
+        "reason": "No recovery workflow is in the sample."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules",
+        "reason": "The availability companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+        "reason": "package.json has no dependencies, scripts, or CI config."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Dependency and build-input attack classes",
+        "reason": "No third-party dependency is declared."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#CI and automation attack classes",
+        "reason": "No CI workflow is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Release and update attack classes",
+        "reason": "No release or updater is in the sample."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules",
+        "reason": "The supply-chain companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Core discipline",
+        "reason": "No HTTP server or parser is in the sample. request.query is already split by the host."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#HTTP framing and cache attack classes",
+        "reason": "No HTTP parser or cache is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Browser-session attack classes",
+        "reason": "No cookie or session is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Federated-identity attack classes",
+        "reason": "No OAuth, OIDC, or SAML flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#MFA, passkey, and account-transition attack classes",
+        "reason": "No account recovery flow is in the sample."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#API-key and mTLS attack classes",
+        "reason": "The bearer string is a source literal covered by Cryptography and secrets, not an HTTP authentication protocol."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Universal moves",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "WEB-PROTOCOL-AND-AUTH.md#Validation rules",
+        "reason": "The HTTP companion is not selected."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Injection",
+        "reason": "Not this unit. Injection units cover findUserByName, findUserById, and describeLookup."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Access control",
+        "reason": "The library has no authentication or authorization check. The host is the only caller, and no protected role is defined."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Cryptography and secrets",
+        "reason": "Not this unit. The credential literal is covered by the authorizationHeader unit."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Business logic",
+        "reason": "No multi-step workflow, quantity, expiry, or fallback role is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+        "reason": "No export, search, preview, notification, or webhook feature is in the sample."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Chained vulnerabilities and trust boundaries",
+        "reason": "No second component consumes the output of the first as a stronger guarantee."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Wildcard",
+        "reason": "Not this unit. One Wildcard unit covers behavior outside the assigned classes."
+      },
+      {
+        "block": "ATTACK-CLASSES.md#Obvious things",
+        "reason": "Not this unit. One Obvious things unit covers the repository-wide checklist."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "candidate",
+    "agent_id": "hunter-files",
+    "reviewed_paths": [
+      "src/library.js",
+      "README.md",
+      "data/user-files/hello.txt",
+      "data/private/payroll.txt"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunter-files",
+        "reviewed_paths": [
+          "src/library.js",
+          "README.md",
+          "data/user-files/hello.txt",
+          "data/private/payroll.txt"
+        ],
+        "invariant": "The path passed to fs.readFileSync in readUserFile stays inside data/user-files.",
+        "method": "source",
+        "result": "No source-visible control enforces that invariant. readUserFile sets relativePath from request.query.file, sets fullPath to path.join(USER_FILES, relativePath), and returns fs.readFileSync(fullPath, utf8). Nothing takes a basename, allowlists the name, or compares the joined path with that directory.",
+        "artifact": null
+      },
+      {
+        "agent_id": "verifier-file",
+        "reviewed_paths": [
+          "src/library.js",
+          "README.md"
+        ],
+        "invariant": "Independent verifier re-read the cited trace and tried to refute it.",
+        "method": "source",
+        "result": "Kept needs_validation. The caller path is joined and read with no allowlist. The returned file text was not observed.",
+        "artifact": null
+      }
+    ],
+    "result_fingerprints": [
+      "src/library.js:readUserFile:path.join:request.query.file"
+    ],
+    "unresolved": [],
+    "assignment_owner": "hunter-files",
+    "hardening": []
+  }
+]

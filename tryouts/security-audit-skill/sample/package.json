@@ -1,0 +1,8 @@
+{
+  "name": "fixture-library",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Small Node library. Hosts pass a request object and a db.query function.",
+  "main": "src/library.js",
+  "license": "MIT"
+}
