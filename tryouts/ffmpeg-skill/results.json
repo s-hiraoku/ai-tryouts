@@ -1,0 +1,768 @@
+{
+  "skill_version": "2.17.3",
+  "install_command": "npx ffmpeg-skill",
+  "install_path": "/home/ubuntu/.claude/skills/ffmpeg-skill",
+  "interface_for_the_four_operations": "skill",
+  "mcp_note": "cut_mcp repeats the off-keyframe cut through mcp/server.py --call",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "thresholds": {
+    "duration_tolerance_s": 0.1,
+    "gain_db": 6.0,
+    "gain_tolerance_db": 1.0,
+    "marker_separation_db": 12.0,
+    "marker_match_db": 6.0,
+    "silence_removed_min_s": 3.0,
+    "long_silence_s": 1.0,
+    "portrait": [
+      406,
+      720
+    ]
+  },
+  "fixture_ok": true,
+  "fixture": {
+    "probe": {
+      "duration_s": 16.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 30.0,
+      "video_codec": "h264",
+      "video_duration_s": 16.0,
+      "video_start_s": 0.0,
+      "audio_codec": "aac",
+      "audio_duration_s": 16.0,
+      "audio_start_s": 0.0,
+      "channels": 2,
+      "sample_rate": "48000",
+      "nb_streams": 2
+    },
+    "marker_loud_db": -24.1,
+    "marker_quiet_db": -63.7,
+    "volume": {
+      "exit_code": 0,
+      "mean_volume_db": -24.3,
+      "max_volume_db": -19.7
+    },
+    "silence_durations_s": [
+      4.0
+    ],
+    "keyframes_s": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0,
+      9.0,
+      10.0,
+      11.0,
+      12.0,
+      13.0,
+      14.0,
+      15.0
+    ]
+  },
+  "marker_separation_db": 39.6,
+  "off_keyframe_duration_spread_s": 0.0,
+  "look": {
+    "exit_code": 0,
+    "output": "out/portrait_look.png",
+    "verified": true,
+    "stderr_tail": ""
+  },
+  "request_miss_while_verified": [
+    "cut_on_keyframe",
+    "cut_off_keyframe",
+    "cut_off_keyframe_repeat",
+    "cut_mcp"
+  ],
+  "marker_kept_while_verified": [
+    "cut_off_keyframe",
+    "cut_off_keyframe_repeat",
+    "cut_mcp"
+  ],
+  "off_keyframe_sha256": {
+    "cut_off_keyframe": "57d27b9a45fc77742437f64d70fa2edfb1e5cee66282c447e35e3d6010c017b1",
+    "cut_off_keyframe_repeat": "57d27b9a45fc77742437f64d70fa2edfb1e5cee66282c447e35e3d6010c017b1",
+    "cut_mcp": "57d27b9a45fc77742437f64d70fa2edfb1e5cee66282c447e35e3d6010c017b1"
+  },
+  "segments_second_span": {
+    "window_s": [
+      2.2,
+      2.7
+    ],
+    "hz_880_mean_db": -23.1,
+    "hz_440_mean_db": -41.4
+  },
+  "trials": [
+    {
+      "name": "cut_on_keyframe",
+      "interface": "skill",
+      "command": "/usr/bin/python3 /home/ubuntu/.claude/skills/ffmpeg-skill/scripts/cut.py out/fixture.mp4 --start 2 --end 5 -o out/cut_on_keyframe.mp4 --json",
+      "exit_code": 0,
+      "tool": {
+        "status": "completed",
+        "output": "out/cut_on_keyframe.mp4",
+        "dry_run": false,
+        "verified": true,
+        "verification": [
+          {
+            "step": "probe",
+            "ok": true
+          }
+        ],
+        "encoder": "copy",
+        "expected_duration": 3.0,
+        "duration_error_ms": 146.68,
+        "precision": "packet",
+        "reencoded": false,
+        "dropped_non_av_streams": false,
+        "requested_start": 2.0,
+        "requested_end": 5.0,
+        "requested_segments": null,
+        "requested_duration": 3.0,
+        "output_duration": 3.14668,
+        "duration_delta_seconds": 0.14668,
+        "mode": "copy",
+        "keyframe_snapped": true,
+        "start_snapped": false,
+        "reencode_reason": [],
+        "least_exact_precision": "packet",
+        "segment_precision": null,
+        "edit_list": false,
+        "stored_preroll_seconds": null,
+        "av_start_skew_seconds": -0.080013,
+        "join_check": null,
+        "segment_end_snap_seconds": null,
+        "declick_ms": null,
+        "notes": [],
+        "nearest_keyframes": null,
+        "lossless_alternative": null,
+        "snap": null
+      },
+      "ffprobe": {
+        "duration_s": 3.147,
+        "width": 1280,
+        "height": 720,
+        "fps": 30.0,
+        "video_codec": "h264",
+        "video_duration_s": 3.067,
+        "video_start_s": 0.08,
+        "audio_codec": "aac",
+        "audio_duration_s": 3.093,
+        "audio_start_s": 0.0,
+        "channels": 2,
+        "sample_rate": "48000",
+        "nb_streams": 2
+      },
+      "duration_check": "miss",
+      "marker": {
+        "state": "absent",
+        "mean_volume_db": -63.9
+      },
+      "silence": null,
+      "size": null,
+      "gain": null,
+      "reality": "fail",
+      "verified": true,
+      "verified_agrees": false,
+      "broken_while_verified": true,
+      "marker_kept_while_verified": false,
+      "stderr_tail": ""
+    },
+    {
+      "name": "cut_off_keyframe",
+      "interface": "skill",
+      "command": "/usr/bin/python3 /home/ubuntu/.claude/skills/ffmpeg-skill/scripts/cut.py out/fixture.mp4 --start 0.40 --end 6 -o out/cut_off_keyframe.mp4 --json",
+      "exit_code": 0,
+      "tool": {
+        "status": "completed",
+        "output": "out/cut_off_keyframe.mp4",
+        "dry_run": false,
+        "verified": true,
+        "verification": [
+          {
+            "step": "probe",
+            "ok": true
+          }
+        ],
+        "encoder": "copy",
+        "expected_duration": 5.6,
+        "duration_error_ms": 487.683,
+        "precision": "packet",
+        "reencoded": false,
+        "dropped_non_av_streams": false,
+        "requested_start": 0.4,
+        "requested_end": 6.0,
+        "requested_segments": null,
+        "requested_duration": 5.6,
+        "output_duration": 6.087683,
+        "duration_delta_seconds": 0.487683,
+        "mode": "copy",
+        "keyframe_snapped": true,
+        "start_snapped": true,
+        "reencode_reason": [],
+        "least_exact_precision": "packet",
+        "segment_precision": null,
+        "edit_list": false,
+        "stored_preroll_seconds": null,
+        "av_start_skew_seconds": -0.021016,
+        "join_check": null,
+        "segment_end_snap_seconds": null,
+        "declick_ms": null,
+        "notes": [],
+        "nearest_keyframes": null,
+        "lossless_alternative": null,
+        "snap": null
+      },
+      "ffprobe": {
+        "duration_s": 6.088,
+        "width": 1280,
+        "height": 720,
+        "fps": 30.0,
+        "video_codec": "h264",
+        "video_duration_s": 6.067,
+        "video_start_s": 0.066,
+        "audio_codec": "aac",
+        "audio_duration_s": 6.037,
+        "audio_start_s": 0.045,
+        "channels": 2,
+        "sample_rate": "48000",
+        "nb_streams": 2
+      },
+      "duration_check": "miss",
+      "marker": {
+        "state": "present",
+        "mean_volume_db": -24.1
+      },
+      "silence": null,
+      "size": null,
+      "gain": null,
+      "reality": "fail",
+      "verified": true,
+      "verified_agrees": false,
+      "broken_while_verified": true,
+      "marker_kept_while_verified": true,
+      "stderr_tail": ""
+    },
+    {
+      "name": "cut_off_keyframe_repeat",
+      "interface": "skill",
+      "command": "/usr/bin/python3 /home/ubuntu/.claude/skills/ffmpeg-skill/scripts/cut.py out/fixture.mp4 --start 0.40 --end 6 -o out/cut_off_keyframe_repeat.mp4 --json",
+      "exit_code": 0,
+      "tool": {
+        "status": "completed",
+        "output": "out/cut_off_keyframe_repeat.mp4",
+        "dry_run": false,
+        "verified": true,
+        "verification": [
+          {
+            "step": "probe",
+            "ok": true
+          }
+        ],
+        "encoder": "copy",
+        "expected_duration": 5.6,
+        "duration_error_ms": 487.683,
+        "precision": "packet",
+        "reencoded": false,
+        "dropped_non_av_streams": false,
+        "requested_start": 0.4,
+        "requested_end": 6.0,
+        "requested_segments": null,
+        "requested_duration": 5.6,
+        "output_duration": 6.087683,
+        "duration_delta_seconds": 0.487683,
+        "mode": "copy",
+        "keyframe_snapped": true,
+        "start_snapped": true,
+        "reencode_reason": [],
+        "least_exact_precision": "packet",
+        "segment_precision": null,
+        "edit_list": false,
+        "stored_preroll_seconds": null,
+        "av_start_skew_seconds": -0.021016,
+        "join_check": null,
+        "segment_end_snap_seconds": null,
+        "declick_ms": null,
+        "notes": [],
+        "nearest_keyframes": null,
+        "lossless_alternative": null,
+        "snap": null
+      },
+      "ffprobe": {
+        "duration_s": 6.088,
+        "width": 1280,
+        "height": 720,
+        "fps": 30.0,
+        "video_codec": "h264",
+        "video_duration_s": 6.067,
+        "video_start_s": 0.066,
+        "audio_codec": "aac",
+        "audio_duration_s": 6.037,
+        "audio_start_s": 0.045,
+        "channels": 2,
+        "sample_rate": "48000",
+        "nb_streams": 2
+      },
+      "duration_check": "miss",
+      "marker": {
+        "state": "present",
+        "mean_volume_db": -24.1
+      },
+      "silence": null,
+      "size": null,
+      "gain": null,
+      "reality": "fail",
+      "verified": true,
+      "verified_agrees": false,
+      "broken_while_verified": true,
+      "marker_kept_while_verified": true,
+      "stderr_tail": ""
+    },
+    {
+      "name": "cut_accurate",
+      "interface": "skill",
+      "command": "/usr/bin/python3 /home/ubuntu/.claude/skills/ffmpeg-skill/scripts/cut.py out/fixture.mp4 --start 0.40 --end 6 --accurate -o out/cut_accurate.mp4 --json",
+      "exit_code": 0,
+      "tool": {
+        "status": "completed",
+        "output": "out/cut_accurate.mp4",
+        "dry_run": false,
+        "verified": true,
+        "verification": [
+          {
+            "step": "probe",
+            "ok": true
+          }
+        ],
+        "encoder": "libx264",
+        "expected_duration": 5.6,
+        "duration_error_ms": 0.0,
+        "precision": "frame",
+        "reencoded": true,
+        "dropped_non_av_streams": false,
+        "requested_start": 0.4,
+        "requested_end": 6.0,
+        "requested_segments": null,
+        "requested_duration": 5.6,
+        "output_duration": 5.6,
+        "duration_delta_seconds": 0.0,
+        "mode": "accurate",
+        "keyframe_snapped": false,
+        "start_snapped": false,
+        "reencode_reason": [
+          "requested"
+        ],
+        "least_exact_precision": "frame",
+        "segment_precision": null,
+        "edit_list": false,
+        "stored_preroll_seconds": null,
+        "av_start_skew_seconds": 0.0,
+        "join_check": null,
+        "segment_end_snap_seconds": null,
+        "declick_ms": null,
+        "notes": [],
+        "nearest_keyframes": null,
+        "lossless_alternative": null,
+        "snap": null
+      },
+      "ffprobe": {
+        "duration_s": 5.6,
+        "width": 1280,
+        "height": 720,
+        "fps": 30.0,
+        "video_codec": "h264",
+        "video_duration_s": 5.6,
+        "video_start_s": 0.0,
+        "audio_codec": "aac",
+        "audio_duration_s": 5.6,
+        "audio_start_s": 0.0,
+        "channels": 2,
+        "sample_rate": "48000",
+        "nb_streams": 2
+      },
+      "duration_check": "match",
+      "marker": {
+        "state": "absent",
+        "mean_volume_db": -63.7
+      },
+      "silence": null,
+      "size": null,
+      "gain": null,
+      "reality": "pass",
+      "verified": true,
+      "verified_agrees": true,
+      "broken_while_verified": false,
+      "marker_kept_while_verified": false,
+      "stderr_tail": ""
+    },
+    {
+      "name": "cut_segments",
+      "interface": "skill",
+      "command": "/usr/bin/python3 /home/ubuntu/.claude/skills/ffmpeg-skill/scripts/cut.py out/fixture.mp4 --segments 0.40-2.40,8.40-11.40 -o out/cut_segments.mp4 --json",
+      "exit_code": 0,
+      "tool": {
+        "status": "completed",
+        "output": "out/cut_segments.mp4",
+        "dry_run": false,
+        "verified": true,
+        "verification": [
+          {
+            "step": "probe",
+            "ok": true
+          }
+        ],
+        "encoder": "libx264",
+        "expected_duration": 5.0,
+        "duration_error_ms": 0.0,
+        "precision": "frame",
+        "reencoded": true,
+        "dropped_non_av_streams": false,
+        "requested_start": null,
+        "requested_end": null,
+        "requested_segments": [
+          [
+            0.4,
+            2.4
+          ],
+          [
+            8.4,
+            11.4
+          ]
+        ],
+        "requested_duration": 5.0,
+        "output_duration": 5.0,
+        "duration_delta_seconds": 0.0,
+        "mode": "hybrid",
+        "keyframe_snapped": false,
+        "start_snapped": false,
+        "reencode_reason": [
+          "tolerance",
+          "concat_fallback"
+        ],
+        "least_exact_precision": "frame",
+        "segment_precision": [
+          "frame",
+          "frame"
+        ],
+        "edit_list": false,
+        "stored_preroll_seconds": null,
+        "av_start_skew_seconds": 0.0,
+        "join_check": null,
+        "segment_end_snap_seconds": null,
+        "declick_ms": 20.0,
+        "notes": [],
+        "nearest_keyframes": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0,
+          11.0,
+          12.0,
+          13.0
+        ],
+        "lossless_alternative": null,
+        "snap": null
+      },
+      "ffprobe": {
+        "duration_s": 5.0,
+        "width": 1280,
+        "height": 720,
+        "fps": 30.0,
+        "video_codec": "h264",
+        "video_duration_s": 5.0,
+        "video_start_s": 0.0,
+        "audio_codec": "aac",
+        "audio_duration_s": 5.0,
+        "audio_start_s": 0.0,
+        "channels": 2,
+        "sample_rate": "48000",
+        "nb_streams": 2
+      },
+      "duration_check": "match",
+      "marker": {
+        "state": "absent",
+        "mean_volume_db": -63.7
+      },
+      "silence": null,
+      "size": null,
+      "gain": null,
+      "reality": "pass",
+      "verified": true,
+      "verified_agrees": true,
+      "broken_while_verified": false,
+      "marker_kept_while_verified": false,
+      "stderr_tail": ""
+    },
+    {
+      "name": "silence",
+      "interface": "skill",
+      "command": "/usr/bin/python3 /home/ubuntu/.claude/skills/ffmpeg-skill/scripts/silence.py out/fixture.mp4 -o out/silence.mp4 --json",
+      "exit_code": 0,
+      "tool": {
+        "status": "completed",
+        "output": "out/silence.mp4",
+        "dry_run": false,
+        "verified": true,
+        "verification": [
+          {
+            "step": "probe",
+            "ok": true
+          }
+        ],
+        "encoder": "libx264",
+        "silences": [
+          [
+            4.0,
+            8.0
+          ]
+        ],
+        "keep": [
+          [
+            0.0,
+            4.15
+          ],
+          [
+            7.85,
+            16.0
+          ]
+        ],
+        "input_duration": 16.0,
+        "kept_duration": 12.3,
+        "removed_seconds": 3.7
+      },
+      "ffprobe": {
+        "duration_s": 12.309,
+        "width": 1280,
+        "height": 720,
+        "fps": 30.0,
+        "video_codec": "h264",
+        "video_duration_s": 12.3,
+        "video_start_s": 0.0,
+        "audio_codec": "aac",
+        "audio_duration_s": 12.309,
+        "audio_start_s": 0.0,
+        "channels": 2,
+        "sample_rate": "48000",
+        "nb_streams": 2
+      },
+      "duration_check": "inconclusive",
+      "marker": null,
+      "silence": {
+        "longest_silence_s": 0.0,
+        "removed_s": 3.691,
+        "ok": true
+      },
+      "size": null,
+      "gain": null,
+      "reality": "pass",
+      "verified": true,
+      "verified_agrees": true,
+      "broken_while_verified": false,
+      "marker_kept_while_verified": false,
+      "stderr_tail": ""
+    },
+    {
+      "name": "portrait",
+      "interface": "skill",
+      "command": "/usr/bin/python3 /home/ubuntu/.claude/skills/ffmpeg-skill/scripts/fit.py out/fixture.mp4 --aspect 9:16 --fit crop -o out/portrait.mp4 --json",
+      "exit_code": 0,
+      "tool": {
+        "status": "completed",
+        "output": "out/portrait.mp4",
+        "dry_run": false,
+        "verified": true,
+        "verification": [
+          {
+            "step": "probe",
+            "ok": true
+          }
+        ],
+        "encoder": "libx264",
+        "dropped_non_av_streams": false
+      },
+      "ffprobe": {
+        "duration_s": 16.0,
+        "width": 406,
+        "height": 720,
+        "fps": 30.0,
+        "video_codec": "h264",
+        "video_duration_s": 16.0,
+        "video_start_s": 0.0,
+        "audio_codec": "aac",
+        "audio_duration_s": 16.0,
+        "audio_start_s": 0.0,
+        "channels": 2,
+        "sample_rate": "48000",
+        "nb_streams": 2
+      },
+      "duration_check": "match",
+      "marker": null,
+      "silence": null,
+      "size": {
+        "expected": [
+          406,
+          720
+        ],
+        "got": [
+          406,
+          720
+        ],
+        "ok": true
+      },
+      "gain": null,
+      "reality": "pass",
+      "verified": true,
+      "verified_agrees": true,
+      "broken_while_verified": false,
+      "marker_kept_while_verified": false,
+      "stderr_tail": ""
+    },
+    {
+      "name": "gain",
+      "interface": "skill",
+      "command": "/usr/bin/python3 /home/ubuntu/.claude/skills/ffmpeg-skill/scripts/audio.py out/fixture.mp4 --gain 6.0 -o out/gain.mp4 --json",
+      "exit_code": 0,
+      "tool": {
+        "status": "completed",
+        "output": "out/gain.mp4",
+        "dry_run": false,
+        "verified": true,
+        "verification": [
+          {
+            "step": "probe",
+            "ok": true
+          }
+        ],
+        "encoder": "copy",
+        "audio": {
+          "voice": null,
+          "stereo_widen": null,
+          "effects": false,
+          "effects_volume": null
+        },
+        "video": true,
+        "audio_stream": 0,
+        "dynamics": [],
+        "dropped_non_av_streams": false
+      },
+      "ffprobe": {
+        "duration_s": 16.0,
+        "width": 1280,
+        "height": 720,
+        "fps": 30.0,
+        "video_codec": "h264",
+        "video_duration_s": 16.0,
+        "video_start_s": 0.0,
+        "audio_codec": "aac",
+        "audio_duration_s": 16.0,
+        "audio_start_s": 0.0,
+        "channels": 2,
+        "sample_rate": "48000",
+        "nb_streams": 2
+      },
+      "duration_check": "match",
+      "marker": null,
+      "silence": null,
+      "size": null,
+      "gain": {
+        "mean_delta_db": 6.0,
+        "max_delta_db": 6.1,
+        "mean_volume_db": -18.3,
+        "max_volume_db": -13.6,
+        "ok": true
+      },
+      "reality": "pass",
+      "verified": true,
+      "verified_agrees": true,
+      "broken_while_verified": false,
+      "marker_kept_while_verified": false,
+      "stderr_tail": ""
+    },
+    {
+      "name": "cut_mcp",
+      "interface": "mcp",
+      "command": "/usr/bin/python3 /home/ubuntu/.claude/skills/ffmpeg-skill/mcp/server.py --call cut",
+      "exit_code": 0,
+      "tool": {
+        "status": "completed",
+        "output": "out/cut_mcp.mp4",
+        "dry_run": false,
+        "verified": true,
+        "verification": [
+          {
+            "step": "probe",
+            "ok": true
+          }
+        ],
+        "encoder": "copy",
+        "expected_duration": 5.6,
+        "duration_error_ms": 487.683,
+        "precision": "packet",
+        "reencoded": false,
+        "dropped_non_av_streams": false,
+        "requested_start": 0.4,
+        "requested_end": 6.0,
+        "requested_segments": null,
+        "requested_duration": 5.6,
+        "output_duration": 6.087683,
+        "duration_delta_seconds": 0.487683,
+        "mode": "copy",
+        "keyframe_snapped": true,
+        "start_snapped": true,
+        "reencode_reason": [],
+        "least_exact_precision": "packet",
+        "segment_precision": null,
+        "edit_list": false,
+        "stored_preroll_seconds": null,
+        "av_start_skew_seconds": -0.021016,
+        "join_check": null,
+        "segment_end_snap_seconds": null,
+        "declick_ms": null,
+        "notes": [],
+        "nearest_keyframes": null,
+        "lossless_alternative": null,
+        "snap": null
+      },
+      "ffprobe": {
+        "duration_s": 6.088,
+        "width": 1280,
+        "height": 720,
+        "fps": 30.0,
+        "video_codec": "h264",
+        "video_duration_s": 6.067,
+        "video_start_s": 0.066,
+        "audio_codec": "aac",
+        "audio_duration_s": 6.037,
+        "audio_start_s": 0.045,
+        "channels": 2,
+        "sample_rate": "48000",
+        "nb_streams": 2
+      },
+      "duration_check": "miss",
+      "marker": {
+        "state": "present",
+        "mean_volume_db": -24.1
+      },
+      "silence": null,
+      "size": null,
+      "gain": null,
+      "reality": "fail",
+      "verified": true,
+      "verified_agrees": false,
+      "broken_while_verified": true,
+      "marker_kept_while_verified": true,
+      "stderr_tail": ""
+    }
+  ]
+}
