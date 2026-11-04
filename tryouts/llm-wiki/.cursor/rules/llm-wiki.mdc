@@ -1,0 +1,9 @@
+---
+description: この試行の共有ログブックは wiki/ である
+alwaysApply: true
+---
+
+LOGBOOK: wiki/
+PROCEDURE: .agents/skills/llm-wiki/SKILL.md
+
+このディレクトリのログブックは `wiki/` である。手順は `.agents/skills/llm-wiki/SKILL.md` を読む。別の `wiki/` を作らない。
