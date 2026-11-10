@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "slow-mcp": {
+      "command": "node",
+      "args": ["server.mjs"]
+    }
+  }
+}
