@@ -1,0 +1,16 @@
+{
+  "session_id": "sess_dummy",
+  "prompt_id": "00000000-0000-4000-8000-000000000001",
+  "transcript_path": "/tmp/dummy/transcript.jsonl",
+  "cwd": "/tmp/dummy-project",
+  "permission_mode": "default",
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "rm -rf /tmp/dummy-build",
+    "description": "remove a dummy build directory",
+    "timeout": 120000,
+    "run_in_background": false
+  },
+  "tool_use_id": "toolu_dummy"
+}

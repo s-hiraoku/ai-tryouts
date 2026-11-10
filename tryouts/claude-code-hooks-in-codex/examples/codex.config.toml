@@ -1,0 +1,7 @@
+[[hooks.PreToolUse]]
+matcher = "^Bash$"
+
+[[hooks.PreToolUse.hooks]]
+type = "command"
+command = 'python3 "$(git rev-parse --show-toplevel)/hooks/block_rm.py"'
+timeout = 10

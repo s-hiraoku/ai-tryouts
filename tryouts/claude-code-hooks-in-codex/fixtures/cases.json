@@ -1,0 +1,52 @@
+[
+  {
+    "name": "claude bash rm -rf",
+    "stdin": "fixtures/claude-bash-rm.json",
+    "decision": "deny"
+  },
+  {
+    "name": "codex bash rm -rf",
+    "stdin": "fixtures/codex-bash-rm.json",
+    "decision": "deny"
+  },
+  {
+    "name": "claude bash echo containing rm -rf",
+    "stdin": "fixtures/claude-bash-echo.json",
+    "decision": "deny"
+  },
+  {
+    "name": "claude bash ls",
+    "stdin": "fixtures/claude-bash-ls.json",
+    "decision": "allow"
+  },
+  {
+    "name": "codex bash ls",
+    "stdin": "fixtures/codex-bash-ls.json",
+    "decision": "allow"
+  },
+  {
+    "name": "claude write has no command string",
+    "stdin": "fixtures/claude-write.json",
+    "decision": "allow"
+  },
+  {
+    "name": "invalid json",
+    "stdin": "fixtures/not-json.txt",
+    "decision": "allow"
+  },
+  {
+    "name": "json array",
+    "stdin": "fixtures/json-array.json",
+    "decision": "allow"
+  },
+  {
+    "name": "command is not a string",
+    "stdin": "fixtures/command-not-string.json",
+    "decision": "allow"
+  },
+  {
+    "name": "empty stdin",
+    "stdin": "fixtures/empty.txt",
+    "decision": "allow"
+  }
+]

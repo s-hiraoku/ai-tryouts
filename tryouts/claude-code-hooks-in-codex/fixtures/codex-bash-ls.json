@@ -1,0 +1,14 @@
+{
+  "session_id": "thr_dummy",
+  "transcript_path": null,
+  "cwd": "/tmp/dummy-project",
+  "hook_event_name": "PreToolUse",
+  "model": "dummy-model",
+  "permission_mode": "acceptEdits",
+  "turn_id": "turn_dummy",
+  "tool_name": "Bash",
+  "tool_use_id": "call_dummy",
+  "tool_input": {
+    "command": "ls /tmp"
+  }
+}
